@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-14T15:35:14.909963" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\Tests">
+<suite id="s1-s1" name="Pages" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\Tests\pages">
+<suite id="s1-s1-s1" name="Flow" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\Tests\pages\flow.robot">
+<test id="s1-s1-s1-t1" name="Add-save-complete a game" line="14">
+<kw name="Open Website" owner="abrirURL">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-01-14T15:35:15.192815" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 500.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\danie\\OneDrive\\\u00c1rea de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\a7ae82ca-049a-40eb-8887-4401161347d1"}</msg>
+<msg time="2026-01-14T15:35:15.346094" level="INFO">Starting Browser process C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59110</msg>
+<msg time="2026-01-14T15:35:16.768865" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":500,"timeout":30000,"tracesDir":"C:\\Users\\danie\\OneDrive\\Área de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\a7ae82ca-049a-40eb-8887-4401161347d1"}</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-01-14T15:35:15.191948" elapsed="1.577244"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-01-14T15:35:16.771817" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2026-01-14T15:35:16.788897" level="INFO">Successfully created context. </msg>
+<msg time="2026-01-14T15:35:16.789039" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-01-14T15:35:16.769571" elapsed="0.019689"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-01-14T15:35:17.886122" level="INFO">Successfully initialized new page object and opened url: http://192.168.0.21:5173/login</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-01-14T15:35:16.789643" elapsed="1.096670"/>
+</kw>
+<status status="PASS" start="2026-01-14T15:35:15.191133" elapsed="2.695303"/>
+</kw>
+<kw name="Login" owner="realizarlogin">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:17.915826" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
+<arg>css=input[placeholder="seu@email.com"]</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:17.887362" elapsed="0.028669"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-01-14T15:35:17.916935" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
+<arg>css=input[placeholder="seu@email.com"]</arg>
+<arg>${EMAIL}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:17.916298" elapsed="0.528807"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:18.453446" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
+<arg>css=input[placeholder="password"]</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:18.445428" elapsed="0.008380"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-01-14T15:35:18.455263" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
+<arg>css=input[placeholder="password"]</arg>
+<arg>${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:18.454161" elapsed="0.517248"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-01-14T15:35:18.972210" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
+<arg>role=button[name="Entrar"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:18.971628" elapsed="0.538197"/>
+</kw>
+<status status="PASS" start="2026-01-14T15:35:17.886819" elapsed="1.623161"/>
+</kw>
+<kw name="Saved game page" owner="home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:21.884466" level="INFO">Waited for Element with selector css=svg[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0 at state visible</msg>
+<arg>css=svg[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:19.511001" elapsed="2.373635"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-01-14T15:35:21.885328" level="INFO">${btn} = css=svg[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0 &gt;&gt; xpath=ancestor::button[1]</msg>
+<var>${btn}</var>
+<arg>css=svg[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0 &gt;&gt; xpath=ancestor::button[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-01-14T15:35:21.884834" elapsed="0.000522"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-01-14T15:35:21.885818" level="INFO">${card} = css=svg[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0 &gt;&gt; xpath=ancestor::button[1] &gt;&gt; xpath=ancestor::div[contains(@class,"relative")][1]</msg>
+<var>${card}</var>
+<arg>${btn} &gt;&gt; xpath=ancestor::div[contains(@class,"relative")][1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-01-14T15:35:21.885460" elapsed="0.000385"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-01-14T15:35:21.910532" level="INFO">Text: 'HYTALE'</msg>
+<msg time="2026-01-14T15:35:21.910690" level="INFO">${game_name} = HYTALE</msg>
+<var>${game_name}</var>
+<arg>${card} &gt;&gt; css=span &gt;&gt; nth=0</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:21.885951" elapsed="0.024765"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2026-01-14T15:35:21.911310" level="INFO">${game_name} = HYTALE</msg>
+<var>${game_name}</var>
+<arg>${game_name}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-01-14T15:35:21.910896" elapsed="0.000441"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-01-14T15:35:21.911888" level="INFO">Clicks the element 'css=[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0'.</msg>
+<arg>css=[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:21.911442" elapsed="0.826143"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Nome do jogo clicado: ${game_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-14T15:35:22.737827" elapsed="0.002044"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-01-14T15:35:22.740933" level="INFO">Clicks the element 'role=link[name="Jogarei"] &gt;&gt; nth=0'.</msg>
+<arg>role=link[name="Jogarei"] &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:22.740104" elapsed="0.559310"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:23.305961" level="INFO">Waited for Element with selector text=HYTALE at state visible</msg>
+<arg>text=${game_name}</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:23.299717" elapsed="0.006402"/>
+</kw>
+<status status="PASS" start="2026-01-14T15:35:19.510468" elapsed="3.795763"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:23.311868" level="INFO">Waited for Element with selector svg[data-testid="SportsEsportsIcon"] &gt;&gt; nth=0 at state visible</msg>
+<arg>svg[data-testid="SportsEsportsIcon"] &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:23.306622" elapsed="0.005410"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-01-14T15:35:23.313014" level="INFO">Clicks the element 'svg[data-testid="SportsEsportsIcon"] &gt;&gt; nth=0'.</msg>
+<arg>svg[data-testid="SportsEsportsIcon"] &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:23.312317" elapsed="0.705122"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:24.023599" level="INFO">Waited for Element with selector text="Jogo movido para Jogando!" at state attached</msg>
+<arg>text="Jogo movido para Jogando!"</arg>
+<arg>attached</arg>
+<arg>500ms</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:24.017876" elapsed="0.005914"/>
+</kw>
+<kw name="Click page Jogando" owner="home">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:24.030160" level="INFO">Waited for Element with selector role=link[name="Jogando"] at state visible</msg>
+<arg>role=link[name="Jogando"]</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:24.024575" elapsed="0.005749"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-01-14T15:35:24.031047" level="INFO">Clicks the element 'role=link[name="Jogando"]'.</msg>
+<arg>role=link[name="Jogando"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:24.030512" elapsed="0.591685"/>
+</kw>
+<status status="PASS" start="2026-01-14T15:35:24.024148" elapsed="0.598178"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:24.628316" level="INFO">Waited for Element with selector css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0 at state visible</msg>
+<arg>css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:24.622732" elapsed="0.005746"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-01-14T15:35:24.629313" level="INFO">Clicks the element 'css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0'.</msg>
+<arg>css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-01-14T15:35:24.628759" elapsed="0.635307"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-01-14T15:35:25.270784" level="INFO">Waited for Element with selector role=button[name="Salvar"] at state visible</msg>
+<arg>role=button[name="Salvar"]</arg>
+<arg>state=visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-01-14T15:35:25.264587" elapsed="0.006330"/>
+</kw>
+<msg time="2026-01-14T15:35:25.278867" level="INFO">Switching context to context=8b584c1f-6b63-4443-86f7-a0ec135e926b in CURRENT</msg>
+<msg time="2026-01-14T15:35:25.285728" level="INFO">Successfully changed active context: context=8b584c1f-6b63-4443-86f7-a0ec135e926b</msg>
+<msg time="2026-01-14T15:35:25.306444" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-01-14T15:35:15.190461" elapsed="10.080701"/>
+</test>
+<status status="PASS" start="2026-01-14T15:35:14.957930" elapsed="10.349578"/>
+</suite>
+<status status="PASS" start="2026-01-14T15:35:14.956724" elapsed="10.355771"/>
+</suite>
+<status status="PASS" start="2026-01-14T15:35:14.911399" elapsed="10.402408"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Pages" id="s1-s1" pass="1" fail="0" skip="0">Tests.Pages</stat>
+<stat name="Flow" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Pages.Flow</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
