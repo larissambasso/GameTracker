@@ -6,9 +6,9 @@ Validate Home Screen
     Wait For Elements State    role=link[name="Jogarei"]    visible    5s
 
 Button Save Game
-    Wait For Elements State    css=[data-testid="BookmarkIcon"] >> nth=0    visible    10s
-    Click    css=[data-testid="BookmarkIcon"] >> nth=0
     Wait For Elements State    css=[data-testid="BookmarkBorderIcon"] >> nth=0    visible    10s
+    Click    css=[data-testid="BookmarkBorderIcon"] >> nth=0
+    Wait For Elements State    css=[data-testid="BookmarkIcon"] >> nth=0    visible    10s
 
 Click Card Game
     Wait For Elements State    css=[data-testid="card-game"] >> nth=0    visible    10s

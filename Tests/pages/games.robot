@@ -1,12 +1,10 @@
 *** Settings ***
-Library    Browser
-Library    Collections
-Library    String
-
+Resource    ../../settings.resource
 Resource    ../../variables/ui.resource
-Resource    ../../resources/abrirURL.resource
-Resource    ../../resources/home.resource
+Resource    ../../resources/pages.resource
 Resource    ../../resources/realizarlogin.resource
+
+Test Setup    Open Website
 
 *** Variables ***
 ${EMPTY_STATE}    css=[data-testid="empty-state-message"]
@@ -23,9 +21,7 @@ ${INVALID_BASE}   asdfghjklqwerty12345
 *** Test Cases ***
 
 Verify Tooltip Logout and exit button
-    Open Website
-    Login
-    Validate Home Screen
+    Ensure Logged In And Home
     Wait For Elements State    css=input[placeholder*="Pesquise"]    visible    10s
     Hover    text="Sair"
     Wait For Elements State    text="Sair"    visible    5s
@@ -37,9 +33,7 @@ Verify Tooltip Logout and exit button
 
 Search Games
     [Tags]    smoke
-    Open Website
-    Login
-    Validate Home Screen
+    Ensure Logged In And Home
     Wait For Elements State    css=input[placeholder*="Pesquise"]    visible    10s
     Fill Text                 css=input[placeholder*="Pesquise"]    ${SEARCH}
     Press Keys                css=input[placeholder*="Pesquise"]    Enter
@@ -49,9 +43,7 @@ Search Games
     Log To Console    \n[SEARCH] Cards encontrados: ${count}\n
 
 Search Nonexistent Game
-    Open Website
-    Login
-    Validate Home Screen
+    Ensure Logged In And Home
     Wait For Elements State    css=input[placeholder*="Pesquise"]    visible    10s
     Fill Text                 css=input[placeholder*="Pesquise"]    ${INVALID_SEARCH}
     Press Keys                css=input[placeholder*="Pesquise"]    Enter
@@ -59,7 +51,6 @@ Search Nonexistent Game
 
 
 Randomness Message Game Noexistent
-    Open Website
     Login
 
     @{seen}=    Create List
@@ -99,19 +90,13 @@ Randomness Message Game Noexistent
 
 
 Verify save button game
-    Open Website
-    Login
-    Validate Home Screen
+    Ensure Logged In And Home
     Button Save Game
 
 Validate Click Card Game
-    Open Website
-    Login
-    Validate Home Screen
+    Ensure Logged In And Home
     Click Card Game
 
 Validate saved game page
-    Open Website
-    Login
-    Validate Home Screen
+    Ensure Logged In And Home
     Saved game page

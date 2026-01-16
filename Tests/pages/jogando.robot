@@ -1,18 +1,15 @@
 *** Settings ***
-Library    Browser
-Library    Collections
-Library    String
-
+Resource    ../../settings.resource
 Resource    ../../variables/ui.resource
-Resource    ../../resources/abrirURL.resource
-Resource    ../../resources/home.resource
+Resource    ../../resources/pages.resource
 Resource    ../../resources/realizarlogin.resource
+
+Test Setup    Open Website
 
 *** Test Cases ***
 
 Validate feedback pause game
-    Open Website
-    Login
+    Ensure Logged In And Home
     Click page Jogando
     Wait For Elements State    css=svg[data-testid="PauseOutlinedIcon"] >> nth=0   visible    10s
     Click    css=svg[data-testid="PauseOutlinedIcon"] >> nth=0
@@ -20,8 +17,7 @@ Validate feedback pause game
     Click    role=button[name="Confirmar"]
 
 Validate modal stats
-    Open Website
-    Login
+    Ensure Logged In And Home
     Click page Jogando
     Wait For Elements State    css=svg[data-testid="SportsScoreIcon"] >> nth=0   visible    10s
     Click    css=svg[data-testid="SportsScoreIcon"] >> nth=0

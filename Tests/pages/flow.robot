@@ -1,19 +1,16 @@
 *** Settings ***
-Library    Browser
-Library    Collections
-Library    String
-
+Resource    ../../settings.resource
 Resource    ../../variables/ui.resource
-Resource    ../../resources/abrirURL.resource
-Resource    ../../resources/home.resource
+Resource    ../../resources/pages.resource
 Resource    ../../resources/realizarlogin.resource
+
+Test Setup    Open Website
 
 
 *** Test Cases ***
 
 Add-save-complete a game
-    Open Website
-    Login
+    Ensure Logged In And Home
     Saved game page
     Wait For Elements State    svg[data-testid="SportsEsportsIcon"] >> nth=0    visible    10s
     Click                      svg[data-testid="SportsEsportsIcon"] >> nth=0
