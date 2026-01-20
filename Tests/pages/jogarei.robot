@@ -33,3 +33,4 @@ Verify game in playing list
     Wait For Elements State    text="Jogo movido para Jogando!"    attached    5s
     Click page Jogando
     Wait For Elements State    svg[data-testid="PauseOutlinedIcon"] >> nth=0    visible    10s
+
