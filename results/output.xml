@@ -1,297 +1,287 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-19T16:39:09.636024" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\Tests">
-<suite id="s1-s1" name="Pages" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\Tests\pages">
-<suite id="s1-s1-s1" name="Jogando" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\Tests\pages\jogando.robot">
-<test id="s1-s1-s1-t1" name="Verify saved info" line="69">
-<kw name="Open Website" owner="settings" type="SETUP">
-<kw name="New Browser" owner="Browser">
-<msg time="2026-01-19T16:39:09.929571" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 500.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\danie\\OneDrive\\\u00c1rea de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\85e514d2-4efe-4479-a237-0472a4e2b2a9"}</msg>
-<msg time="2026-01-19T16:39:10.089808" level="INFO">Starting Browser process C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:64865</msg>
-<msg time="2026-01-19T16:39:11.509323" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":500,"timeout":30000,"tracesDir":"C:\\Users\\danie\\OneDrive\\Área de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\85e514d2-4efe-4479-a237-0472a4e2b2a9"}</msg>
-<arg>chromium</arg>
-<arg>headless=${HEADLESS}</arg>
-<arg>slowMo=${VELOCIT}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-01-19T16:39:09.928773" elapsed="1.580907"/>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-28T14:39:27.312260" rpa="false" schemaversion="5">
+<suite id="s1" name="Testapi" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\Tests\api\Testapi.robot">
+<kw name="Suite Setup Seguro" owner="validarAPI" type="SETUP">
+<kw name="Login Supabase via API" owner="validarAPI">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-01-28T14:39:27.514638" level="INFO">Creating Session using : alias=auth, url=https://navfbtaxterxdcjjtfco.supabase.co, headers={},                     cookies={}, auth=None, timeout=5, proxies=None, verify=False,                     debug=0 </msg>
+<arg>auth</arg>
+<arg>${SUPABASE_AUTH_BASE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-01-28T14:39:27.514394" elapsed="0.000476"/>
 </kw>
-<kw name="New Context" owner="Browser">
-<msg time="2026-01-19T16:39:11.512217" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2026-01-19T16:39:11.531182" level="INFO">Successfully created context. </msg>
-<msg time="2026-01-19T16:39:11.531311" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-01-19T16:39:11.510108" elapsed="0.021332"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-28T14:39:27.515598" level="INFO">&amp;{headers} = { apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd...</msg>
+<var>&amp;{headers}</var>
+<arg>apikey=${ANON_KEY}</arg>
+<arg>Authorization=Bearer ${ANON_KEY}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-28T14:39:27.515043" elapsed="0.000584"/>
 </kw>
-<kw name="New Page" owner="Browser">
-<msg time="2026-01-19T16:39:12.538633" level="INFO">Successfully initialized new page object and opened url: http://192.168.0.21:5173/login</msg>
-<arg>${URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2026-01-19T16:39:11.531767" elapsed="1.007145"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-28T14:39:27.516037" level="INFO">&amp;{body} = { email=test-user@larissa.com | password=Senha@123 }</msg>
+<var>&amp;{body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-28T14:39:27.515735" elapsed="0.000323"/>
 </kw>
-<status status="PASS" start="2026-01-19T16:39:09.927973" elapsed="2.611118"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-28T14:39:27.516356" level="INFO">&amp;{params} = { grant_type=password }</msg>
+<var>&amp;{params}</var>
+<arg>grant_type=password</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-28T14:39:27.516144" elapsed="0.000232"/>
 </kw>
-<kw name="Ensure Logged In And Home" owner="settings">
-<kw name="Login" owner="realizarlogin">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-01-19T16:39:12.572150" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-01-19T16:39:12.540871" elapsed="0.031603"/>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-01-28T14:39:28.034170" level="INFO">POST Request : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
+ path_url=/auth/v1/token?grant_type=password 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd-ql9bvKF0DfvWdBoY', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd-ql9bvKF0DfvWdBoY', 'Content-Type': 'application/json', 'Content-Length': '59'} 
+ body=b'{"email": "test-user@larissa.com", "password": "Senha@123"}' 
+ </msg>
+<msg time="2026-01-28T14:39:28.034285" level="INFO">POST Response : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 28 Jan 2026 17:39:29 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'CF-Ray': '9c5244fd3e83f191-GRU', 'CF-Cache-Status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'sb-auth-refresh-token-prefix': '6leiy', 'sb-auth-session-id': '585d8abc-3ccd-427b-b50a-e7e51bd35af8', 'sb-auth-user-id': 'daf507f6-92d1-43be-bef4-b3e6aace522d', 'sb-gateway-version': '1', 'sb-project-ref': 'navfbtaxterxdcjjtfco', 'sb-request-id': '019c05b0-5a49-7a7d-8a04-4b15d9bcc4d5', 'x-envoy-attempt-count': '1', 'x-envoy-upstream-service-time': '124', 'Set-Cookie': '__cf_bm=CdaEvt7_v89u4aRzP9zqoKkAqwyL7yagGv0t1Oi0Br8-1769621969-1.0.1.1-jQRS3JJ6Lc1PTrz8vW0DVnt.skVhZFcqOcPvvET3HQH_jtu0pGDbu27xX2LKUtuPziawiU1ymUimClQy_3Mh25WoDqKS0zKh9lrUSrWhpug; path=/; expires=Wed, 28-Jan-26 18:09:29 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZTUyMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzY5NjI1NTY5LCJpYXQiOjE3Njk2MjE5NjksImVtYWlsIjoidGVzdC11c2VyQGxhcmlzc2EuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZX0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3Njk2MjE5Njl9XSwic2Vzc2lvbl9pZCI6IjU4NWQ4YWJjLTNjY2QtNDI3Yi1iNTBhLWU3ZTUxYmQzNWFmOCIsImlzX2Fub255bW91cyI6ZmFsc2V9.dBkwiTIG2O4O_jU8BIrhUjZp_pGQalzTK5lQDVpr0B0","token_type":"bearer","expires_in":3600,"expires_at":1769625569,"refresh_token":"6leiyzvslq6g","user":{"id":"daf507f6-92d1-43be-bef4-b3e6aace522d","aud":"authenticated","role":"authenticated","email":"test-user@larissa.com","email_confirmed_at":"2025-12-31T21:05:23.799727Z","phone":"","confirmed_at":"2025-12-31T21:05:23.799727Z","last_sign_in_at":"2026-01-28T17:39:29.653317815Z","app_metadata":{"provider":"email","providers":["email"]},"user_metadata":{"email_verified":true},"identities":[{"identity_id":"27cf74dc-c003-4fe7-bda1-d3a35fd15a6d","id":"daf507f6-92d1-43be-bef4-b3e6aace522d","user_id":"daf507f6-92d1-43be-bef4-b3e6aace522d","identity_data":{"email":"test-user@larissa.com","email_verified":false,"phone_verified":false,"sub":"daf507f6-92d1-43be-bef4-b3e6aace522d"},"provider":"email","last_sign_in_at":"2025-12-31T21:05:23.793263Z","created_at":"2025-12-31T21:05:23.79334Z","updated_at":"2025-12-31T21:05:23.79334Z","email":"test-user@larissa.com"}],"created_at":"2025-12-31T21:05:23.778618Z","updated_at":"2026-01-28T17:39:29.675354Z","is_anonymous":false},"weak_password":null} 
+ </msg>
+<msg time="2026-01-28T14:39:28.034357" level="INFO">C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'navfbtaxterxdcjjtfco.supabase.co'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-01-28T14:39:28.034646" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>auth</arg>
+<arg>url=/auth/v1/token</arg>
+<arg>params=${params}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-01-28T14:39:27.516454" elapsed="0.518238"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-01-19T16:39:12.574209" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>${EMAIL}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:12.572848" elapsed="0.518667"/>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-01-28T14:39:28.035450" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-01-28T14:39:28.034847" elapsed="0.000657"/>
 </kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-01-19T16:39:13.097740" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
-<arg>css=input[placeholder="password"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-01-19T16:39:13.091742" elapsed="0.006205"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-28T14:39:28.036156" level="INFO">&amp;{data} = { access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYm...</msg>
+<var>&amp;{data}</var>
+<arg>json.loads($resp.text)</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-28T14:39:28.035587" elapsed="0.000593"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-01-19T16:39:13.098949" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
-<arg>css=input[placeholder="password"]</arg>
-<arg>${PASSWORD}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:13.098195" elapsed="0.515720"/>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-28T14:39:28.036554" level="INFO">${jwt} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
+<var>${jwt}</var>
+<arg>${data}</arg>
+<arg>access_token</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-28T14:39:28.036344" elapsed="0.000234"/>
 </kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-01-19T16:39:13.614899" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
-<arg>role=button[name="Entrar"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:13.614147" elapsed="0.550663"/>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-28T14:39:28.036965" level="INFO">${JWT_TOKEN} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
+<arg>${JWT_TOKEN}</arg>
+<arg>${jwt}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-28T14:39:28.036675" elapsed="0.000324"/>
 </kw>
-<status status="PASS" start="2026-01-19T16:39:12.540232" elapsed="1.624731"/>
+<status status="PASS" start="2026-01-28T14:39:27.513925" elapsed="0.523132"/>
 </kw>
-<kw name="Validate Home Screen" owner="pages">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-01-19T16:39:14.980762" level="INFO">Waited for Element with selector role=link[name="Jogarei"] at state visible</msg>
-<arg>role=link[name="Jogarei"]</arg>
-<arg>visible</arg>
-<arg>5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-01-19T16:39:14.165584" elapsed="0.815406"/>
+<kw name="Checar Endpoint Protegido" owner="validarAPI">
+<kw name="Set Log Level" owner="BuiltIn">
+<var>${old}</var>
+<arg>NONE</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2026-01-28T14:39:28.037311" elapsed="0.000291"/>
 </kw>
-<status status="PASS" start="2026-01-19T16:39:14.165151" elapsed="0.815992"/>
+<kw name="Create Session" owner="RequestsLibrary">
+<arg>api</arg>
+<arg>${API_BASE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-01-28T14:39:28.037680" elapsed="0.000251"/>
 </kw>
-<status status="PASS" start="2026-01-19T16:39:12.539556" elapsed="2.441659"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>&amp;{headers}</var>
+<arg>Authorization</arg>
+<arg>Bearer ${JWT_TOKEN}</arg>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-28T14:39:28.038023" elapsed="0.000280"/>
 </kw>
-<kw name="Click page Jogando" owner="pages">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-01-19T16:39:14.988208" level="INFO">Waited for Element with selector role=link[name="Jogando"] at state visible</msg>
-<arg>role=link[name="Jogando"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-01-19T16:39:14.982155" elapsed="0.006230"/>
+<kw name="GET On Session" owner="RequestsLibrary">
+<var>${resp}</var>
+<arg>api</arg>
+<arg>${ENDPOINT}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-01-28T14:39:28.038392" elapsed="1.422928"/>
 </kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-01-19T16:39:14.989115" level="INFO">Clicks the element 'role=link[name="Jogando"]'.</msg>
-<arg>role=link[name="Jogando"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:14.988595" elapsed="0.542396"/>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<arg>${resp.status_code} == 200</arg>
+<arg>Fail</arg>
+<arg>API check falhou: ${API_BASE}${ENDPOINT} retornou ${resp.status_code}. Body: ${resp.text}</arg>
+<doc>*DEPRECATED since RF 5.0. Use native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2026-01-28T14:39:29.461500" elapsed="0.000826"/>
 </kw>
-<status status="PASS" start="2026-01-19T16:39:14.981725" elapsed="0.549414"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>${old}</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.462452" elapsed="0.000310"/>
 </kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-01-19T16:39:15.580210" level="INFO">Waited for Element with selector css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0 at state visible</msg>
-<arg>css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-01-19T16:39:15.531465" elapsed="0.049016"/>
+<status status="PASS" start="2026-01-28T14:39:28.037184" elapsed="1.425635"/>
 </kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-01-19T16:39:15.581804" level="INFO">Clicks the element 'css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0'.</msg>
-<arg>css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:15.580945" elapsed="1.018457"/>
+<status status="PASS" start="2026-01-28T14:39:27.513651" elapsed="1.949205"/>
 </kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-01-19T16:39:16.607762" level="INFO">Waited for Element with selector role=button[name="Salvar"] at state visible</msg>
-<arg>role=button[name="Salvar"]</arg>
-<arg>state=visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-01-19T16:39:16.599901" elapsed="0.008070"/>
+<test id="s1-t1" name="API - endpoint protegido responde 200" line="9">
+<kw name="Suite Setup Seguro" owner="validarAPI">
+<kw name="Login Supabase via API" owner="validarAPI">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-01-28T14:39:29.463901" level="INFO">Creating Session using : alias=auth, url=https://navfbtaxterxdcjjtfco.supabase.co, headers={},                     cookies={}, auth=None, timeout=5, proxies=None, verify=False,                     debug=0 </msg>
+<arg>auth</arg>
+<arg>${SUPABASE_AUTH_BASE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-01-28T14:39:29.463715" elapsed="0.000316"/>
 </kw>
-<kw name="Set Hours And Minutes">
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-01-19T16:39:16.609610" level="INFO">Fills the text '9' in the given field.</msg>
-<arg>css=input[name="hours_played.hours"]</arg>
-<arg>${h}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:16.609018" elapsed="0.526841"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-28T14:39:29.464507" level="INFO">&amp;{headers} = { apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd...</msg>
+<var>&amp;{headers}</var>
+<arg>apikey=${ANON_KEY}</arg>
+<arg>Authorization=Bearer ${ANON_KEY}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.464141" elapsed="0.000389"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-01-19T16:39:17.136897" level="INFO">Fills the text '47' in the given field.</msg>
-<arg>css=input[name="hours_played.minutes"]</arg>
-<arg>${m}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:17.136140" elapsed="0.527200"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-28T14:39:29.464904" level="INFO">&amp;{body} = { email=test-user@larissa.com | password=Senha@123 }</msg>
+<var>&amp;{body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.464616" elapsed="0.000309"/>
 </kw>
-<arg>9</arg>
-<arg>47</arg>
-<status status="PASS" start="2026-01-19T16:39:16.608443" elapsed="1.055067"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-28T14:39:29.465218" level="INFO">&amp;{params} = { grant_type=password }</msg>
+<var>&amp;{params}</var>
+<arg>grant_type=password</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.465007" elapsed="0.000231"/>
 </kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-01-19T16:39:17.664715" level="INFO">Clicks the element 'css=select[name="platform_used"]'.</msg>
-<arg>css=select[name="platform_used"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:17.663883" elapsed="0.539258"/>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-01-28T14:39:29.879780" level="INFO">POST Request : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
+ path_url=/auth/v1/token?grant_type=password 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd-ql9bvKF0DfvWdBoY', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd-ql9bvKF0DfvWdBoY', 'Content-Type': 'application/json', 'Content-Length': '59'} 
+ body=b'{"email": "test-user@larissa.com", "password": "Senha@123"}' 
+ </msg>
+<msg time="2026-01-28T14:39:29.879864" level="INFO">POST Response : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 28 Jan 2026 17:39:31 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'CF-Ray': '9c524508ef2ef199-GRU', 'CF-Cache-Status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'sb-auth-refresh-token-prefix': 'km3lq', 'sb-auth-session-id': '41d001db-ff48-4a7b-b826-7e22dd898cff', 'sb-auth-user-id': 'daf507f6-92d1-43be-bef4-b3e6aace522d', 'sb-gateway-version': '1', 'sb-project-ref': 'navfbtaxterxdcjjtfco', 'sb-request-id': '019c05b0-6197-710a-b830-21fc4f8de55d', 'x-envoy-attempt-count': '1', 'x-envoy-upstream-service-time': '97', 'Set-Cookie': '__cf_bm=bDAP18YwlQBx.wY7J7n_gRw214QEUBWZ2hh_NkkpJy0-1769621971-1.0.1.1-AO6zNM15ZqYjX5c17VmvjvicECP5.TaXuvux2YDlffwMJPidEo7V9E9Ry0syoAk9rh9z.MXsqsFHS_euOHKccFOWmFkxbP88sLJaZg0alPs; path=/; expires=Wed, 28-Jan-26 18:09:31 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZTUyMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzY5NjI1NTcxLCJpYXQiOjE3Njk2MjE5NzEsImVtYWlsIjoidGVzdC11c2VyQGxhcmlzc2EuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZX0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3Njk2MjE5NzF9XSwic2Vzc2lvbl9pZCI6IjQxZDAwMWRiLWZmNDgtNGE3Yi1iODI2LTdlMjJkZDg5OGNmZiIsImlzX2Fub255bW91cyI6ZmFsc2V9.l6UlGNXsC_MepoasjHHkFbusvZaD-x-_XhWY0n4GfYM","token_type":"bearer","expires_in":3600,"expires_at":1769625571,"refresh_token":"km3lqvad54n7","user":{"id":"daf507f6-92d1-43be-bef4-b3e6aace522d","aud":"authenticated","role":"authenticated","email":"test-user@larissa.com","email_confirmed_at":"2025-12-31T21:05:23.799727Z","phone":"","confirmed_at":"2025-12-31T21:05:23.799727Z","last_sign_in_at":"2026-01-28T17:39:31.521752564Z","app_metadata":{"provider":"email","providers":["email"]},"user_metadata":{"email_verified":true},"identities":[{"identity_id":"27cf74dc-c003-4fe7-bda1-d3a35fd15a6d","id":"daf507f6-92d1-43be-bef4-b3e6aace522d","user_id":"daf507f6-92d1-43be-bef4-b3e6aace522d","identity_data":{"email":"test-user@larissa.com","email_verified":false,"phone_verified":false,"sub":"daf507f6-92d1-43be-bef4-b3e6aace522d"},"provider":"email","last_sign_in_at":"2025-12-31T21:05:23.793263Z","created_at":"2025-12-31T21:05:23.79334Z","updated_at":"2025-12-31T21:05:23.79334Z","email":"test-user@larissa.com"}],"created_at":"2025-12-31T21:05:23.778618Z","updated_at":"2026-01-28T17:39:31.525642Z","is_anonymous":false},"weak_password":null} 
+ </msg>
+<msg time="2026-01-28T14:39:29.879952" level="INFO">C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'navfbtaxterxdcjjtfco.supabase.co'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-01-28T14:39:29.880230" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>auth</arg>
+<arg>url=/auth/v1/token</arg>
+<arg>params=${params}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.465312" elapsed="0.414960"/>
 </kw>
-<kw name="Select Options By" owner="Browser">
-<msg time="2026-01-19T16:39:18.204416" level="INFO">Selects the option(s) PlayStation 2 by attribute SelectAttribute.label from element css=select[name="platform_used"].</msg>
-<arg>css=select[name="platform_used"]</arg>
-<arg>label</arg>
-<arg>PlayStation 2</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:18.203613" elapsed="0.537625"/>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-01-28T14:39:29.881000" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.880428" elapsed="0.000622"/>
 </kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-01-19T16:39:18.742397" level="INFO">Clicks the element 'css=select[name="completion_type"]'.</msg>
-<arg>css=select[name="completion_type"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:18.741800" elapsed="0.544304"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-28T14:39:29.881578" level="INFO">&amp;{data} = { access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYm...</msg>
+<var>&amp;{data}</var>
+<arg>json.loads($resp.text)</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.881131" elapsed="0.000471"/>
 </kw>
-<kw name="Select Options By" owner="Browser">
-<msg time="2026-01-19T16:39:19.287451" level="INFO">Selects the option(s) Campanha Principal by attribute SelectAttribute.label from element css=select[name="completion_type"].</msg>
-<arg>css=select[name="completion_type"]</arg>
-<arg>label</arg>
-<arg>Campanha Principal</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:19.286569" elapsed="0.523224"/>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-28T14:39:29.881816" level="INFO">${jwt} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
+<var>${jwt}</var>
+<arg>${data}</arg>
+<arg>access_token</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.881683" elapsed="0.000190"/>
 </kw>
-<kw name="Select conclusion date">
-<kw name="Click" owner="Browser">
-<msg time="2026-01-19T16:39:19.811369" level="INFO">Clicks the element 'css=input[name="completed_at"]'.</msg>
-<arg>css=input[name="completed_at"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:19.810912" elapsed="0.537055"/>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-28T14:39:29.882367" level="INFO">${JWT_TOKEN} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
+<arg>${JWT_TOKEN}</arg>
+<arg>${jwt}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.882018" elapsed="0.000386"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-01-19T16:39:20.348896" level="INFO">Fills the text '2026-01-19' in the given field.</msg>
-<arg>css=input[name="completed_at"]</arg>
-<arg>2026-01-19</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:20.348200" elapsed="0.519861"/>
+<status status="PASS" start="2026-01-28T14:39:29.463525" elapsed="0.418932"/>
 </kw>
-<kw name="Get Property" owner="Browser">
-<msg time="2026-01-19T16:39:20.878231" level="INFO">Property: '2026-01-19'</msg>
-<msg time="2026-01-19T16:39:20.878401" level="INFO">${val} = 2026-01-19</msg>
-<var>${val}</var>
-<arg>css=input[name="completed_at"]</arg>
-<arg>value</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the ``property`` of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:20.868287" elapsed="0.010142"/>
+<kw name="Checar Endpoint Protegido" owner="validarAPI">
+<kw name="Set Log Level" owner="BuiltIn">
+<var>${old}</var>
+<arg>NONE</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.882755" elapsed="0.000290"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${val}</arg>
-<arg>2026-01-19</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-01-19T16:39:20.878620" elapsed="0.000540"/>
+<kw name="Create Session" owner="RequestsLibrary">
+<arg>api</arg>
+<arg>${API_BASE}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-01-28T14:39:29.883127" elapsed="0.000239"/>
 </kw>
-<status status="PASS" start="2026-01-19T16:39:19.810226" elapsed="1.069010"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>&amp;{headers}</var>
+<arg>Authorization</arg>
+<arg>Bearer ${JWT_TOKEN}</arg>
+<arg>Content-Type</arg>
+<arg>application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.883451" elapsed="0.000279"/>
 </kw>
-<kw name="Select Rating">
-<kw name="Click" owner="Browser">
-<msg time="2026-01-19T16:39:20.880279" level="INFO">Clicks the element 'css=div:has(&gt; label:has-text("Sua Avaliação")) label:has(+ input[type="radio"][value="4"])'.</msg>
-<arg>css=div:has(&gt; label:has-text("Sua Avaliação")) label:has(+ input[type="radio"][value="${value}"])</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-01-19T16:39:20.879850" elapsed="0.562094"/>
+<kw name="GET On Session" owner="RequestsLibrary">
+<var>${resp}</var>
+<arg>api</arg>
+<arg>${ENDPOINT}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-01-28T14:39:29.883815" elapsed="0.827943"/>
 </kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-01-19T16:39:21.448319" level="INFO">Waited for Element with selector css=span.text-2xl.font-black.text-yellow-500.w-10.text-right:has-text("7") at state visible</msg>
-<arg>css=span.text-2xl.font-black.text-yellow-500.w-10.text-right:has-text("7")</arg>
-<arg>visible</arg>
-<arg>5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-01-19T16:39:21.442151" elapsed="0.006354"/>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<arg>${resp.status_code} == 200</arg>
+<arg>Fail</arg>
+<arg>API check falhou: ${API_BASE}${ENDPOINT} retornou ${resp.status_code}. Body: ${resp.text}</arg>
+<doc>*DEPRECATED since RF 5.0. Use native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2026-01-28T14:39:30.711936" elapsed="0.000829"/>
 </kw>
-<arg>4</arg>
-<status status="PASS" start="2026-01-19T16:39:20.879511" elapsed="0.569112"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>${old}</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2026-01-28T14:39:30.712847" elapsed="0.000294"/>
 </kw>
-<msg time="2026-01-19T16:39:21.461356" level="INFO">Switching context to context=cc38c3ff-0fa7-45fb-a48f-c87fa51c7ab4 in CURRENT</msg>
-<msg time="2026-01-19T16:39:21.468196" level="INFO">Successfully changed active context: context=cc38c3ff-0fa7-45fb-a48f-c87fa51c7ab4</msg>
-<msg time="2026-01-19T16:39:21.488234" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-01-19T16:39:09.927139" elapsed="11.521886"/>
+<status status="PASS" start="2026-01-28T14:39:29.882582" elapsed="0.830609"/>
+</kw>
+<status status="PASS" start="2026-01-28T14:39:29.463263" elapsed="1.249962"/>
+</kw>
+<status status="PASS" start="2026-01-28T14:39:29.462909" elapsed="1.250508"/>
 </test>
-<status status="PASS" start="2026-01-19T16:39:09.678721" elapsed="11.810878"/>
-</suite>
-<status status="PASS" start="2026-01-19T16:39:09.676999" elapsed="11.818679"/>
-</suite>
-<status status="PASS" start="2026-01-19T16:39:09.637593" elapsed="11.858942"/>
+<doc>Validar API antes de rodar as outras suites</doc>
+<status status="PASS" start="2026-01-28T14:39:27.314116" elapsed="3.399805"/>
 </suite>
 <statistics>
 <total>
@@ -300,11 +290,11 @@
 <tag>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
-<stat name="Pages" id="s1-s1" pass="1" fail="0" skip="0">Tests.Pages</stat>
-<stat name="Jogando" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Pages.Jogando</stat>
+<stat name="Testapi" id="s1" pass="1" fail="0" skip="0">Testapi</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-01-28T14:39:29.461529" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2026-01-28T14:39:30.711964" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
 </errors>
 </robot>
