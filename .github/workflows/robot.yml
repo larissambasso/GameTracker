@@ -27,6 +27,14 @@ jobs:
           rfbrowser init
 
       - name: Run Robot
+        env:
+          API_BASE: ${{ secrets.API_BASE }}
+          ENDPOINT: ${{ secrets.ENDPOINT }}
+          SUPABASE_AUTH_BASE: ${{ secrets.SUPABASE_AUTH_BASE }}
+          ANON_KEY: ${{ secrets.ANON_KEY }}
+          JWT_TOKEN: ${{ secrets.JWT_TOKEN }}
+          URL: ${{ secrets.URL }}
+          HEADLESS: ${{ secrets.HEADLESS }}
         run: |
           robot -d results Tests
 
