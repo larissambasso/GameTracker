@@ -5,6 +5,7 @@ Library    Collections
 
 Resource   ../variables/api.resource
 Resource   ../variables/users.resource
+Resource   ../settings.resource
 
 *** Keywords ***
 

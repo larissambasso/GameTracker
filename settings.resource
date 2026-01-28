@@ -5,6 +5,7 @@ Library    String
 
 Resource    ./resources/realizarlogin.resource
 Resource    ./resources/pages.resource
+Resource    ./variables/api.resource
 
 *** Keywords ***
 Open Website
@@ -18,6 +19,5 @@ Ensure Logged In And Home
 
 
 *** Variables ***
-${URL}        http://192.168.0.21:5173/login
 ${VELOCIT}    500ms
-${HEADLESS}   False
+${TIMEOUT}      5
