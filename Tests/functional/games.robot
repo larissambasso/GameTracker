@@ -1,13 +1,15 @@
 *** Settings ***
 Resource    ../../settings.resource
-Resource    ../../variables/ui.resource
-Resource    ../../resources/pages.resource
-Resource    ../../resources/realizarlogin.resource
+
+
+
 
 Test Setup    Open Website
 
 *** Variables ***
 ${EMPTY_STATE}    css=[data-testid="empty-state-message"]
+${SEARCH}         Cyberpunk 2077
+${INVALID_SEARCH}    asdfghjklqwerty12345
 ${SEARCH_INPUT}   css=input[placeholder*="Pesquise"]
 ${TRIES}          5
 ${INVALID_BASE}   asdfghjklqwerty12345
@@ -51,7 +53,7 @@ Search Nonexistent Game
 
 
 Randomness Message Game Noexistent
-    Login
+    LoginPage.Login
 
     @{seen}=    Create List
 

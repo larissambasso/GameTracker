@@ -15,4 +15,4 @@ Get-Content .env | ForEach-Object {
 }
 
 # roda os testes
-robot -d results Tests
+robot -d results tests

@@ -3,9 +3,9 @@ Library    Browser
 Library    Collections
 Library    String
 
-Resource    ./resources/realizarlogin.resource
 Resource    ./resources/pages.resource
-Resource    ./variables/api.resource
+Resource    ./config/endpoints.resource
+Resource    ./resources/pages/LoginPage.resource
 
 *** Keywords ***
 Open Website
@@ -14,7 +14,7 @@ Open Website
     New Page    ${URL}
 
 Ensure Logged In And Home
-    Login
+    LoginPage.Login
     Validate Home Screen
 
 

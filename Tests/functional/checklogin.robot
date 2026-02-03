@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../../resources/pages.resource
-Resource    ../../resources/realizarlogin.resource
+Resource    ../../resources/pages/LoginPage.resource
 Resource    ../../settings.resource
 
 Test Tags    smoke
@@ -13,7 +13,7 @@ Home - smoke
     Invalid Login
     Reload
     Wait For Elements State    css=input[placeholder="seu@email.com"]    visible    10s
-    Login
+    LoginPage.Login
     Validate Home Screen
 
 

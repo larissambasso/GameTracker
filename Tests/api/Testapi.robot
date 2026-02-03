@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../resources/validarAPI.resource
+Resource    ../../resources/shared/ApiValidator.resource
 Documentation    Validar API antes de rodar as outras suites
 
 

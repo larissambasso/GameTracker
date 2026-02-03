@@ -1,8 +1,8 @@
 *** Settings ***
 Resource    ../../settings.resource
-Resource    ../../variables/ui.resource
+
 Resource    ../../resources/pages.resource
-Resource    ../../resources/realizarlogin.resource
+Resource    ../../resources/pages/LoginPage.resource
 
 Test Setup    Open Website
 

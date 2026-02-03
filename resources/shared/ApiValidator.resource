@@ -3,9 +3,9 @@ Library    RequestsLibrary
 Library    BuiltIn
 Library    Collections
 
-Resource   ../variables/api.resource
-Resource   ../variables/users.resource
-Resource   ../settings.resource
+Resource   ../../config/endpoints.resource
+Resource   ../../data/users.resource
+Resource   ../../settings.resource
 
 *** Keywords ***
 
