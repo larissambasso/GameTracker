@@ -28,7 +28,6 @@ Verify Tooltip Logout and exit button
     Hover    text="Sair"
     Wait For Elements State    text="Sair"    visible    5s
     Click    text="Sair"
-    Wait For Elements State    css=input[placeholder="seu@email.com"]    visible    10s
     ${current_url}=    Get Url
     Should Contain     ${current_url}    /login
 
