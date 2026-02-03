@@ -1,8 +1,6 @@
 *** Settings ***
 Resource    ../../settings.resource
 
-Resource    ../../resources/pages.resource
-Resource    ../../resources/pages/LoginPage.resource
 
 Test Setup    Open Website
 

@@ -33,12 +33,12 @@ Abaixo, explico pasta por pasta o que foi criado, o que foi movido para lá e o 
 **Por que fiz isso:**
 Configurações como URLs de API ou seletores globais não são "variáveis de teste" nem "lógica". Elas são configurações do ambiente. Se a URL da API mudar de `dev` para `qa`, você altera APENAS aqui, e não caça arquivos espalhados.
 
-### 📂 2. `data/` (NOVA)
+### 📂 2. `access/` (NOVA)
 **O que coloquei aqui:**
 *   `users.resource` (Antigo `variables/users.resource`)
 
 **Por que fiz isso:**
-**Isolamento de Dados.** Dados de teste (usuários, senhas, produtos) são voláteis. Eles não devem ficar misturados com o código de teste. Ao separá-los em `data/`, facilitamos a atualização da massa de testes sem risco de quebrar a lógica da automação.
+**Isolamento de Dados.** Dados de teste (usuários, senhas, produtos) são voláteis. Eles não devem ficar misturados com o código de teste. Ao separá-los em `access/`, facilitamos a atualização da massa de testes sem risco de quebrar a lógica da automação.
 
 ### 📂 3. `resources/pages/` (ORGANIZADA)
 **O que coloquei aqui:**

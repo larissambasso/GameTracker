@@ -4,7 +4,7 @@ Library    BuiltIn
 Library    Collections
 
 Resource   ../../config/endpoints.resource
-Resource   ../../data/users.resource
+Resource   ../../access/users.resource
 Resource   ../../settings.resource
 
 *** Keywords ***

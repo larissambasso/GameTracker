@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-03T08:53:36.143057" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-03T09:18:15.313566" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests">
 <suite id="s1-s1" name="Api" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\api">
 <suite id="s1-s1-s1" name="Testapi" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\api\Testapi.robot">
 <kw name="Suite Setup Seguro" owner="ApiValidator" type="SETUP">
 <kw name="Login Supabase via API" owner="ApiValidator">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T08:53:36.855500" level="INFO">Creating Session using : alias=auth, url=https://navfbtaxterxdcjjtfco.supabase.co, headers={},                     cookies={}, auth=None, timeout=5, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-02-03T09:18:15.674870" level="INFO">Creating Session using : alias=auth, url=https://navfbtaxterxdcjjtfco.supabase.co, headers={},                     cookies={}, auth=None, timeout=5, proxies=None, verify=False,                     debug=0 </msg>
 <arg>auth</arg>
 <arg>${SUPABASE_AUTH_BASE}</arg>
 <arg>timeout=${TIMEOUT}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T08:53:36.855200" elapsed="0.000481"/>
+<status status="PASS" start="2026-02-03T09:18:15.674585" elapsed="0.000462"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T08:53:36.856424" level="INFO">&amp;{headers} = { apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd...</msg>
+<msg time="2026-02-03T09:18:15.675758" level="INFO">&amp;{headers} = { apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd...</msg>
 <var>&amp;{headers}</var>
 <arg>apikey=${ANON_KEY}</arg>
 <arg>Authorization=Bearer ${ANON_KEY}</arg>
 <arg>Content-Type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T08:53:36.855826" elapsed="0.000632"/>
+<status status="PASS" start="2026-02-03T09:18:15.675193" elapsed="0.000598"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T08:53:36.856970" level="INFO">&amp;{body} = { email=test-user@larissa.com | password=Senha@123 }</msg>
+<msg time="2026-02-03T09:18:15.676298" level="INFO">&amp;{body} = { email=test-user@larissa.com | password=Senha@123 }</msg>
 <var>&amp;{body}</var>
 <arg>email=${EMAIL}</arg>
 <arg>password=${PASSWORD}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T08:53:36.856580" elapsed="0.000417"/>
+<status status="PASS" start="2026-02-03T09:18:15.675913" elapsed="0.000411"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T08:53:36.857405" level="INFO">&amp;{params} = { grant_type=password }</msg>
+<msg time="2026-02-03T09:18:15.676734" level="INFO">&amp;{params} = { grant_type=password }</msg>
 <var>&amp;{params}</var>
 <arg>grant_type=password</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T08:53:36.857106" elapsed="0.000324"/>
+<status status="PASS" start="2026-02-03T09:18:15.676439" elapsed="0.000321"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T08:53:38.391219" level="INFO">POST Request : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
+<msg time="2026-02-03T09:18:16.991214" level="INFO">POST Request : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
  path_url=/auth/v1/token?grant_type=password 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd-ql9bvKF0DfvWdBoY', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd-ql9bvKF0DfvWdBoY', 'Content-Type': 'application/json', 'Content-Length': '59'} 
  body=b'{"email": "test-user@larissa.com", "password": "Senha@123"}' 
  </msg>
-<msg time="2026-02-03T08:53:38.391339" level="INFO">POST Response : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
+<msg time="2026-02-03T09:18:16.991335" level="INFO">POST Response : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
  status=200, reason=OK 
- headers={'Date': 'Tue, 03 Feb 2026 11:53:41 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'CF-Ray': '9c81baaa9bb06aa4-SJP', 'CF-Cache-Status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'sb-auth-refresh-token-prefix': 'zl6up', 'sb-auth-session-id': 'facac71a-4a9d-4077-80d1-1787eb24ed54', 'sb-auth-user-id': 'daf507f6-92d1-43be-bef4-b3e6aace522d', 'sb-gateway-version': '1', 'sb-project-ref': 'navfbtaxterxdcjjtfco', 'sb-request-id': '019c2359-e6b1-7692-b369-beb65baf6d5f', 'x-envoy-attempt-count': '1', 'x-envoy-upstream-service-time': '385', 'Set-Cookie': '__cf_bm=wylrhYE3ES8VSE2ZYnwUCnm_.f66ZEqor9J1gVgS8ck-1770119621-1.0.1.1-34gSxXWnPwhZMPgmtnE2rA8tt9cYwyO285gp0yTDWE41JpadXNKmmNbVmVEaIJIRV55NhHRQ0XEFItCf1MxV.SRS3nQCtDmPYpLoqojNreQ; path=/; expires=Tue, 03-Feb-26 12:23:41 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None', 'alt-svc': 'h3=":443"; ma=86400'} 
- body={"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZTUyMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzcwMTIzMjIxLCJpYXQiOjE3NzAxMTk2MjEsImVtYWlsIjoidGVzdC11c2VyQGxhcmlzc2EuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZX0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzAxMTk2MjF9XSwic2Vzc2lvbl9pZCI6ImZhY2FjNzFhLTRhOWQtNDA3Ny04MGQxLTE3ODdlYjI0ZWQ1NCIsImlzX2Fub255bW91cyI6ZmFsc2V9.zWG_MBZDKPmnlvmo2kZXKkH5NtgqI2KTnGW_sRzjC_8","token_type":"bearer","expires_in":3600,"expires_at":1770123221,"refresh_token":"zl6uploriqzg","user":{"id":"daf507f6-92d1-43be-bef4-b3e6aace522d","aud":"authenticated","role":"authenticated","email":"test-user@larissa.com","email_confirmed_at":"2025-12-31T21:05:23.799727Z","phone":"","confirmed_at":"2025-12-31T21:05:23.799727Z","last_sign_in_at":"2026-02-03T11:53:41.357882474Z","app_metadata":{"provider":"email","providers":["email"]},"user_metadata":{"email_verified":true},"identities":[{"identity_id":"27cf74dc-c003-4fe7-bda1-d3a35fd15a6d","id":"daf507f6-92d1-43be-bef4-b3e6aace522d","user_id":"daf507f6-92d1-43be-bef4-b3e6aace522d","identity_data":{"email":"test-user@larissa.com","email_verified":false,"phone_verified":false,"sub":"daf507f6-92d1-43be-bef4-b3e6aace522d"},"provider":"email","last_sign_in_at":"2025-12-31T21:05:23.793263Z","created_at":"2025-12-31T21:05:23.79334Z","updated_at":"2025-12-31T21:05:23.79334Z","email":"test-user@larissa.com"}],"created_at":"2025-12-31T21:05:23.778618Z","updated_at":"2026-02-03T11:53:41.406807Z","is_anonymous":false},"weak_password":null} 
+ headers={'Date': 'Tue, 03 Feb 2026 12:18:20 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'CF-Ray': '9c81dec52fdb6aa2-SJP', 'CF-Cache-Status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'sb-auth-refresh-token-prefix': 'zqeip', 'sb-auth-session-id': '6ee92690-0572-47c4-a953-3809f76df0e6', 'sb-auth-user-id': 'daf507f6-92d1-43be-bef4-b3e6aace522d', 'sb-gateway-version': '1', 'sb-project-ref': 'navfbtaxterxdcjjtfco', 'sb-request-id': '019c2370-7741-703b-b4a1-0691c06bd377', 'x-envoy-attempt-count': '1', 'x-envoy-upstream-service-time': '250', 'Set-Cookie': '__cf_bm=_rCEF8QcJ9pXmZ3bwNmI5.z3yhQhvSYK1Ak3f8FCVco-1770121100-1.0.1.1-xXwl0U76vWQVD8HFKU7WBZcYtO7qZxmoSL.LiD_ajjvUXRjrWqwmLEWVcUqK0BQFmnneqWM.5he3QysdgU4jaRLv1Yqbrl_vrQfiUFHpBtw; path=/; expires=Tue, 03-Feb-26 12:48:20 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZTUyMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzcwMTI0NzAwLCJpYXQiOjE3NzAxMjExMDAsImVtYWlsIjoidGVzdC11c2VyQGxhcmlzc2EuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZX0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzAxMjExMDB9XSwic2Vzc2lvbl9pZCI6IjZlZTkyNjkwLTA1NzItNDdjNC1hOTUzLTM4MDlmNzZkZjBlNiIsImlzX2Fub255bW91cyI6ZmFsc2V9.TxiEhDxrMFcyjfyhkHQRsVfn3EcsEJU1fZiThvw92vk","token_type":"bearer","expires_in":3600,"expires_at":1770124700,"refresh_token":"zqeipdlqbfiw","user":{"id":"daf507f6-92d1-43be-bef4-b3e6aace522d","aud":"authenticated","role":"authenticated","email":"test-user@larissa.com","email_confirmed_at":"2025-12-31T21:05:23.799727Z","phone":"","confirmed_at":"2025-12-31T21:05:23.799727Z","last_sign_in_at":"2026-02-03T12:18:20.017306907Z","app_metadata":{"provider":"email","providers":["email"]},"user_metadata":{"email_verified":true},"identities":[{"identity_id":"27cf74dc-c003-4fe7-bda1-d3a35fd15a6d","id":"daf507f6-92d1-43be-bef4-b3e6aace522d","user_id":"daf507f6-92d1-43be-bef4-b3e6aace522d","identity_data":{"email":"test-user@larissa.com","email_verified":false,"phone_verified":false,"sub":"daf507f6-92d1-43be-bef4-b3e6aace522d"},"provider":"email","last_sign_in_at":"2025-12-31T21:05:23.793263Z","created_at":"2025-12-31T21:05:23.79334Z","updated_at":"2025-12-31T21:05:23.79334Z","email":"test-user@larissa.com"}],"created_at":"2025-12-31T21:05:23.778618Z","updated_at":"2026-02-03T12:18:20.049986Z","is_anonymous":false},"weak_password":null} 
  </msg>
-<msg time="2026-02-03T08:53:38.391417" level="INFO">C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'navfbtaxterxdcjjtfco.supabase.co'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2026-02-03T09:18:16.991414" level="INFO">C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'navfbtaxterxdcjjtfco.supabase.co'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2026-02-03T08:53:38.391676" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<msg time="2026-02-03T09:18:16.991663" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
 <var>${resp}</var>
 <arg>auth</arg>
 <arg>url=/auth/v1/token</arg>
@@ -58,55 +58,55 @@
 <arg>json=${body}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T08:53:36.857530" elapsed="1.534198"/>
+<status status="PASS" start="2026-02-03T09:18:15.676858" elapsed="1.314838"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T08:53:38.392700" level="INFO">Argument types are:
+<msg time="2026-02-03T09:18:16.992628" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${resp.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T08:53:38.391932" elapsed="0.000831"/>
+<status status="PASS" start="2026-02-03T09:18:16.991879" elapsed="0.000808"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-02-03T08:53:38.393563" level="INFO">&amp;{data} = { access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYm...</msg>
+<msg time="2026-02-03T09:18:16.993615" level="INFO">&amp;{data} = { access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYm...</msg>
 <var>&amp;{data}</var>
 <arg>json.loads($resp.text)</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-02-03T08:53:38.392869" elapsed="0.000743"/>
+<status status="PASS" start="2026-02-03T09:18:16.992794" elapsed="0.000913"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-02-03T08:53:38.393962" level="INFO">${jwt} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
+<msg time="2026-02-03T09:18:16.994250" level="INFO">${jwt} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
 <var>${jwt}</var>
 <arg>${data}</arg>
 <arg>access_token</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-02-03T08:53:38.393723" elapsed="0.000266"/>
+<status status="PASS" start="2026-02-03T09:18:16.993884" elapsed="0.000395"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-02-03T08:53:38.394439" level="INFO">${JWT_TOKEN} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
+<msg time="2026-02-03T09:18:16.994774" level="INFO">${JWT_TOKEN} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
 <arg>${JWT_TOKEN}</arg>
 <arg>${jwt}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-02-03T08:53:38.394100" elapsed="0.000379"/>
+<status status="PASS" start="2026-02-03T09:18:16.994393" elapsed="0.000422"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:36.854512" elapsed="1.540039"/>
+<status status="PASS" start="2026-02-03T09:18:15.673906" elapsed="1.320985"/>
 </kw>
 <kw name="Checar Endpoint Protegido" owner="ApiValidator">
 <kw name="Set Log Level" owner="BuiltIn">
 <var>${old}</var>
 <arg>NONE</arg>
 <doc>Sets the log threshold to the specified level.</doc>
-<status status="PASS" start="2026-02-03T08:53:38.394904" elapsed="0.000558"/>
+<status status="PASS" start="2026-02-03T09:18:16.995269" elapsed="0.000399"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
 <arg>api</arg>
 <arg>${API_BASE}</arg>
 <arg>timeout=${TIMEOUT}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T08:53:38.395628" elapsed="0.000441"/>
+<status status="PASS" start="2026-02-03T09:18:16.995772" elapsed="0.000360"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
 <var>&amp;{headers}</var>
@@ -115,7 +115,7 @@
 <arg>Content-Type</arg>
 <arg>application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T08:53:38.396186" elapsed="0.000388"/>
+<status status="PASS" start="2026-02-03T09:18:16.996248" elapsed="0.000374"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
 <var>${resp}</var>
@@ -123,73 +123,73 @@
 <arg>${ENDPOINT}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T08:53:38.396685" elapsed="0.641190"/>
+<status status="PASS" start="2026-02-03T09:18:16.996730" elapsed="1.103520"/>
 </kw>
 <kw name="Run Keyword Unless" owner="BuiltIn">
 <arg>${resp.status_code} == 200</arg>
 <arg>Fail</arg>
 <arg>API check falhou: ${API_BASE}${ENDPOINT} retornou ${resp.status_code}. Body: ${resp.text}</arg>
 <doc>*DEPRECATED since RF 5.0. Use native IF/ELSE or `Run Keyword If` instead.*</doc>
-<status status="PASS" start="2026-02-03T08:53:39.038093" elapsed="0.000891"/>
+<status status="PASS" start="2026-02-03T09:18:18.100456" elapsed="0.000981"/>
 </kw>
 <kw name="Set Log Level" owner="BuiltIn">
 <arg>${old}</arg>
 <doc>Sets the log threshold to the specified level.</doc>
-<status status="PASS" start="2026-02-03T08:53:39.039093" elapsed="0.000415"/>
+<status status="PASS" start="2026-02-03T09:18:18.101552" elapsed="0.000429"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:38.394693" elapsed="0.644887"/>
+<status status="PASS" start="2026-02-03T09:18:16.995041" elapsed="1.107013"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:36.854140" elapsed="2.185491"/>
+<status status="PASS" start="2026-02-03T09:18:15.673545" elapsed="2.428560"/>
 </kw>
 <test id="s1-s1-s1-t1" name="API - endpoint protegido responde 200" line="9">
 <kw name="Suite Setup Seguro" owner="ApiValidator">
 <kw name="Login Supabase via API" owner="ApiValidator">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T08:53:39.040854" level="INFO">Creating Session using : alias=auth, url=https://navfbtaxterxdcjjtfco.supabase.co, headers={},                     cookies={}, auth=None, timeout=5, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-02-03T09:18:18.103734" level="INFO">Creating Session using : alias=auth, url=https://navfbtaxterxdcjjtfco.supabase.co, headers={},                     cookies={}, auth=None, timeout=5, proxies=None, verify=False,                     debug=0 </msg>
 <arg>auth</arg>
 <arg>${SUPABASE_AUTH_BASE}</arg>
 <arg>timeout=${TIMEOUT}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T08:53:39.040625" elapsed="0.000340"/>
+<status status="PASS" start="2026-02-03T09:18:18.103467" elapsed="0.000407"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T08:53:39.041472" level="INFO">&amp;{headers} = { apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd...</msg>
+<msg time="2026-02-03T09:18:18.104495" level="INFO">&amp;{headers} = { apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd...</msg>
 <var>&amp;{headers}</var>
 <arg>apikey=${ANON_KEY}</arg>
 <arg>Authorization=Bearer ${ANON_KEY}</arg>
 <arg>Content-Type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T08:53:39.041070" elapsed="0.000430"/>
+<status status="PASS" start="2026-02-03T09:18:18.103998" elapsed="0.000527"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T08:53:39.041968" level="INFO">&amp;{body} = { email=test-user@larissa.com | password=Senha@123 }</msg>
+<msg time="2026-02-03T09:18:18.105038" level="INFO">&amp;{body} = { email=test-user@larissa.com | password=Senha@123 }</msg>
 <var>&amp;{body}</var>
 <arg>email=${EMAIL}</arg>
 <arg>password=${PASSWORD}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T08:53:39.041605" elapsed="0.000388"/>
+<status status="PASS" start="2026-02-03T09:18:18.104639" elapsed="0.000425"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T08:53:39.042387" level="INFO">&amp;{params} = { grant_type=password }</msg>
+<msg time="2026-02-03T09:18:18.105483" level="INFO">&amp;{params} = { grant_type=password }</msg>
 <var>&amp;{params}</var>
 <arg>grant_type=password</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T08:53:39.042092" elapsed="0.000321"/>
+<status status="PASS" start="2026-02-03T09:18:18.105169" elapsed="0.000341"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T08:53:40.030292" level="INFO">POST Request : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
+<msg time="2026-02-03T09:18:19.160383" level="INFO">POST Request : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
  path_url=/auth/v1/token?grant_type=password 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd-ql9bvKF0DfvWdBoY', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdmZidGF4dGVyeGRjamp0ZmNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MzkyMTYsImV4cCI6MjA4MTIxNTIxNn0.XBsD-fLoZuL2HJPYuFn5bQVZjd-ql9bvKF0DfvWdBoY', 'Content-Type': 'application/json', 'Content-Length': '59'} 
  body=b'{"email": "test-user@larissa.com", "password": "Senha@123"}' 
  </msg>
-<msg time="2026-02-03T08:53:40.030395" level="INFO">POST Response : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
+<msg time="2026-02-03T09:18:19.160482" level="INFO">POST Response : url=https://navfbtaxterxdcjjtfco.supabase.co/auth/v1/token?grant_type=password 
  status=200, reason=OK 
- headers={'Date': 'Tue, 03 Feb 2026 11:53:43 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'CF-Ray': '9c81bab818f63646-FLN', 'CF-Cache-Status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'sb-auth-refresh-token-prefix': 'ogap4', 'sb-auth-session-id': 'f55a4cab-4ff9-4109-b853-3b30808d042f', 'sb-auth-user-id': 'daf507f6-92d1-43be-bef4-b3e6aace522d', 'sb-gateway-version': '1', 'sb-project-ref': 'navfbtaxterxdcjjtfco', 'sb-request-id': '019c2359-ef1d-7265-8e80-5e4e17dbcc5e', 'x-envoy-attempt-count': '1', 'x-envoy-upstream-service-time': '101', 'Set-Cookie': '__cf_bm=66I00ONOKoCBbFYZTV8EN1on_DS83Mj7yeyDaSAqnwQ-1770119623-1.0.1.1-ptqzU_TeEj1_AjaRLLkN33cNr02BDUBGVn11hsoeVw1mepm6xC4kw0.n1y_8eCm45ZGU7Bl2pPs1liwDAu5.HURZorcZcldozP8ez5L92mo; path=/; expires=Tue, 03-Feb-26 12:23:43 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None', 'alt-svc': 'h3=":443"; ma=86400'} 
- body={"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZTUyMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzcwMTIzMjIzLCJpYXQiOjE3NzAxMTk2MjMsImVtYWlsIjoidGVzdC11c2VyQGxhcmlzc2EuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZX0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzAxMTk2MjN9XSwic2Vzc2lvbl9pZCI6ImY1NWE0Y2FiLTRmZjktNDEwOS1iODUzLTNiMzA4MDhkMDQyZiIsImlzX2Fub255bW91cyI6ZmFsc2V9.nV8a8Nm_pvr2-B49oh2eEtUy2GfStgsWnLxP1m0L2EU","token_type":"bearer","expires_in":3600,"expires_at":1770123223,"refresh_token":"ogap4x35njlq","user":{"id":"daf507f6-92d1-43be-bef4-b3e6aace522d","aud":"authenticated","role":"authenticated","email":"test-user@larissa.com","email_confirmed_at":"2025-12-31T21:05:23.799727Z","phone":"","confirmed_at":"2025-12-31T21:05:23.799727Z","last_sign_in_at":"2026-02-03T11:53:43.095255336Z","app_metadata":{"provider":"email","providers":["email"]},"user_metadata":{"email_verified":true},"identities":[{"identity_id":"27cf74dc-c003-4fe7-bda1-d3a35fd15a6d","id":"daf507f6-92d1-43be-bef4-b3e6aace522d","user_id":"daf507f6-92d1-43be-bef4-b3e6aace522d","identity_data":{"email":"test-user@larissa.com","email_verified":false,"phone_verified":false,"sub":"daf507f6-92d1-43be-bef4-b3e6aace522d"},"provider":"email","last_sign_in_at":"2025-12-31T21:05:23.793263Z","created_at":"2025-12-31T21:05:23.79334Z","updated_at":"2025-12-31T21:05:23.79334Z","email":"test-user@larissa.com"}],"created_at":"2025-12-31T21:05:23.778618Z","updated_at":"2026-02-03T11:53:43.102853Z","is_anonymous":false},"weak_password":null} 
+ headers={'Date': 'Tue, 03 Feb 2026 12:18:22 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'CF-Ray': '9c81ded4896f53d1-GYN', 'CF-Cache-Status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'sb-auth-refresh-token-prefix': 'r5iqb', 'sb-auth-session-id': '53f05df1-e7be-4b04-b9a3-3f62fbd15022', 'sb-auth-user-id': 'daf507f6-92d1-43be-bef4-b3e6aace522d', 'sb-gateway-version': '1', 'sb-project-ref': 'navfbtaxterxdcjjtfco', 'sb-request-id': '019c2370-80da-7991-9527-b7e7838aea2d', 'x-envoy-attempt-count': '1', 'x-envoy-upstream-service-time': '97', 'Set-Cookie': '__cf_bm=7LL31fOT6Wc50KTN1L1NF0vCB_mC9hbEPp1Nh1EnRZY-1770121102-1.0.1.1-amCpky9hjfPaDpkMbwc3ZW_1fH41FRZdV93a1kFvnaGpNSXPYv.Igy47ggiZTDfMyYRZ9KXWofciFp3ky8UCqV9y1Sea31GQ.l2J2H0.2hs; path=/; expires=Tue, 03-Feb-26 12:48:22 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZTUyMmQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzcwMTI0NzAyLCJpYXQiOjE3NzAxMjExMDIsImVtYWlsIjoidGVzdC11c2VyQGxhcmlzc2EuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZX0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzAxMjExMDJ9XSwic2Vzc2lvbl9pZCI6IjUzZjA1ZGYxLWU3YmUtNGIwNC1iOWEzLTNmNjJmYmQxNTAyMiIsImlzX2Fub255bW91cyI6ZmFsc2V9.F66zOACYi5MJgvOXkb1ndCoygWC6OdhbSaCrpTXkchg","token_type":"bearer","expires_in":3600,"expires_at":1770124702,"refresh_token":"r5iqbtl622ad","user":{"id":"daf507f6-92d1-43be-bef4-b3e6aace522d","aud":"authenticated","role":"authenticated","email":"test-user@larissa.com","email_confirmed_at":"2025-12-31T21:05:23.799727Z","phone":"","confirmed_at":"2025-12-31T21:05:23.799727Z","last_sign_in_at":"2026-02-03T12:18:22.203533074Z","app_metadata":{"provider":"email","providers":["email"]},"user_metadata":{"email_verified":true},"identities":[{"identity_id":"27cf74dc-c003-4fe7-bda1-d3a35fd15a6d","id":"daf507f6-92d1-43be-bef4-b3e6aace522d","user_id":"daf507f6-92d1-43be-bef4-b3e6aace522d","identity_data":{"email":"test-user@larissa.com","email_verified":false,"phone_verified":false,"sub":"daf507f6-92d1-43be-bef4-b3e6aace522d"},"provider":"email","last_sign_in_at":"2025-12-31T21:05:23.793263Z","created_at":"2025-12-31T21:05:23.79334Z","updated_at":"2025-12-31T21:05:23.79334Z","email":"test-user@larissa.com"}],"created_at":"2025-12-31T21:05:23.778618Z","updated_at":"2026-02-03T12:18:22.207981Z","is_anonymous":false},"weak_password":null} 
  </msg>
-<msg time="2026-02-03T08:53:40.030487" level="INFO">C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'navfbtaxterxdcjjtfco.supabase.co'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2026-02-03T09:18:19.160573" level="INFO">C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'navfbtaxterxdcjjtfco.supabase.co'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2026-02-03T08:53:40.030654" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<msg time="2026-02-03T09:18:19.160809" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
 <var>${resp}</var>
 <arg>auth</arg>
 <arg>url=/auth/v1/token</arg>
@@ -197,55 +197,55 @@
 <arg>json=${body}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T08:53:39.042508" elapsed="0.988178"/>
+<status status="PASS" start="2026-02-03T09:18:18.105610" elapsed="1.055231"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T08:53:40.031577" level="INFO">Argument types are:
+<msg time="2026-02-03T09:18:19.161754" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${resp.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T08:53:40.030858" elapsed="0.000776"/>
+<status status="PASS" start="2026-02-03T09:18:19.161020" elapsed="0.000791"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-02-03T08:53:40.032264" level="INFO">&amp;{data} = { access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYm...</msg>
+<msg time="2026-02-03T09:18:19.162452" level="INFO">&amp;{data} = { access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYm...</msg>
 <var>&amp;{data}</var>
 <arg>json.loads($resp.text)</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-02-03T08:53:40.031739" elapsed="0.000554"/>
+<status status="PASS" start="2026-02-03T09:18:19.161918" elapsed="0.000640"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-02-03T08:53:40.032614" level="INFO">${jwt} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
+<msg time="2026-02-03T09:18:19.163144" level="INFO">${jwt} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
 <var>${jwt}</var>
 <arg>${data}</arg>
 <arg>access_token</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-02-03T08:53:40.032400" elapsed="0.000240"/>
+<status status="PASS" start="2026-02-03T09:18:19.162764" elapsed="0.000409"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-02-03T08:53:40.033076" level="INFO">${JWT_TOKEN} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
+<msg time="2026-02-03T09:18:19.163691" level="INFO">${JWT_TOKEN} = eyJhbGciOiJIUzI1NiIsImtpZCI6IlFPTmplU0JBTUhlMTY5WXUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25hdmZidGF4dGVyeGRjamp0ZmNvLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkYWY1MDdmNi05MmQxLTQzYmUtYmVmNC1iM2U2YWFjZ...</msg>
 <arg>${JWT_TOKEN}</arg>
 <arg>${jwt}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-02-03T08:53:40.032744" elapsed="0.000370"/>
+<status status="PASS" start="2026-02-03T09:18:19.163289" elapsed="0.000443"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:39.040388" elapsed="0.992789"/>
+<status status="PASS" start="2026-02-03T09:18:18.103196" elapsed="1.060606"/>
 </kw>
 <kw name="Checar Endpoint Protegido" owner="ApiValidator">
 <kw name="Set Log Level" owner="BuiltIn">
 <var>${old}</var>
 <arg>NONE</arg>
 <doc>Sets the log threshold to the specified level.</doc>
-<status status="PASS" start="2026-02-03T08:53:40.033558" elapsed="0.000371"/>
+<status status="PASS" start="2026-02-03T09:18:19.164217" elapsed="0.000412"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
 <arg>api</arg>
 <arg>${API_BASE}</arg>
 <arg>timeout=${TIMEOUT}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T08:53:40.034027" elapsed="0.000311"/>
+<status status="PASS" start="2026-02-03T09:18:19.164734" elapsed="0.000342"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
 <var>&amp;{headers}</var>
@@ -254,7 +254,7 @@
 <arg>Content-Type</arg>
 <arg>application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T08:53:40.034440" elapsed="0.000344"/>
+<status status="PASS" start="2026-02-03T09:18:19.165186" elapsed="0.000366"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
 <var>${resp}</var>
@@ -262,49 +262,49 @@
 <arg>${ENDPOINT}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T08:53:40.034891" elapsed="1.245404"/>
+<status status="PASS" start="2026-02-03T09:18:19.165660" elapsed="1.095525"/>
 </kw>
 <kw name="Run Keyword Unless" owner="BuiltIn">
 <arg>${resp.status_code} == 200</arg>
 <arg>Fail</arg>
 <arg>API check falhou: ${API_BASE}${ENDPOINT} retornou ${resp.status_code}. Body: ${resp.text}</arg>
 <doc>*DEPRECATED since RF 5.0. Use native IF/ELSE or `Run Keyword If` instead.*</doc>
-<status status="PASS" start="2026-02-03T08:53:41.280511" elapsed="0.001108"/>
+<status status="PASS" start="2026-02-03T09:18:20.261447" elapsed="0.001398"/>
 </kw>
 <kw name="Set Log Level" owner="BuiltIn">
 <arg>${old}</arg>
 <doc>Sets the log threshold to the specified level.</doc>
-<status status="PASS" start="2026-02-03T08:53:41.281771" elapsed="0.000432"/>
+<status status="PASS" start="2026-02-03T09:18:20.263049" elapsed="0.000594"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:40.033313" elapsed="1.248956"/>
+<status status="PASS" start="2026-02-03T09:18:19.163952" elapsed="1.099769"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:39.040083" elapsed="2.242235"/>
+<status status="PASS" start="2026-02-03T09:18:18.102742" elapsed="2.161031"/>
 </kw>
-<msg time="2026-02-03T08:53:41.983331" level="INFO">Starting Browser process C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:52263</msg>
-<status status="PASS" start="2026-02-03T08:53:39.039694" elapsed="2.242830"/>
+<msg time="2026-02-03T09:18:20.423906" level="INFO">Starting Browser process C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54879</msg>
+<status status="PASS" start="2026-02-03T09:18:18.102168" elapsed="2.161812"/>
 </test>
 <doc>Validar API antes de rodar as outras suites</doc>
-<status status="PASS" start="2026-02-03T08:53:36.182189" elapsed="6.969751"/>
+<status status="PASS" start="2026-02-03T09:18:15.351623" elapsed="6.257776"/>
 </suite>
-<status status="PASS" start="2026-02-03T08:53:36.181145" elapsed="6.975651"/>
+<status status="PASS" start="2026-02-03T09:18:15.350224" elapsed="6.262829"/>
 </suite>
 <suite id="s1-s2" name="Functional" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional">
 <suite id="s1-s2-s1" name="Checklogin" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional\checklogin.robot">
 <test id="s1-s2-s1-t1" name="Home - smoke" line="12">
 <kw name="Open Website" owner="settings" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-02-03T08:53:43.173658" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 500.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\danie\\OneDrive\\\u00c1rea de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\2a66158e-3fa8-4504-b888-7cb5daf5f068"}</msg>
-<msg time="2026-02-03T08:53:43.798058" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":500,"timeout":30000,"tracesDir":"C:\\Users\\danie\\OneDrive\\Área de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\2a66158e-3fa8-4504-b888-7cb5daf5f068"}</msg>
+<msg time="2026-02-03T09:18:21.627288" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 500.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\danie\\OneDrive\\\u00c1rea de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\4fc808ad-908c-4cc9-9191-f0170fa8bb5e"}</msg>
+<msg time="2026-02-03T09:18:21.913368" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":500,"timeout":30000,"tracesDir":"C:\\Users\\danie\\OneDrive\\Área de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\4fc808ad-908c-4cc9-9191-f0170fa8bb5e"}</msg>
 <arg>chromium</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>slowMo=${VELOCIT}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-02-03T08:53:43.172509" elapsed="0.625821"/>
+<status status="PASS" start="2026-02-03T09:18:21.626477" elapsed="0.287177"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-02-03T08:53:43.800381" level="INFO">{
+<msg time="2026-02-03T09:18:21.915938" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -314,190 +314,130 @@
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "height": 720,
-    "width": 1280
+    "width": 1280,
+    "height": 720
   }
 }</msg>
-<msg time="2026-02-03T08:53:43.816362" level="INFO">Successfully created context. </msg>
-<msg time="2026-02-03T08:53:43.816483" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2026-02-03T09:18:21.932909" level="INFO">Successfully created context. </msg>
+<msg time="2026-02-03T09:18:21.933033" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-02-03T08:53:43.798645" elapsed="0.017937"/>
+<status status="PASS" start="2026-02-03T09:18:21.913977" elapsed="0.019167"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-02-03T08:53:46.218933" level="INFO">Successfully initialized new page object and opened url: https://ephemeral-alfajores-312419.netlify.app/login-register</msg>
+<msg time="2026-02-03T09:18:23.462864" level="INFO">Successfully initialized new page object and opened url: https://ephemeral-alfajores-312419.netlify.app/login-register</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-02-03T08:53:43.816907" elapsed="2.402212"/>
+<status status="PASS" start="2026-02-03T09:18:21.933431" elapsed="1.529698"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:43.171944" elapsed="3.047309"/>
+<status status="PASS" start="2026-02-03T09:18:21.625997" elapsed="1.837323"/>
 </kw>
 <kw name="Invalid Login" owner="LoginPage">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:53:55.738085" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
+<msg time="2026-02-03T09:18:33.468484" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-02-03T09:18:33.468617" level="INFO">See also file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/GamesRobot/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-02-03T09:18:33.468947" level="FAIL">Error: Could not find active page</msg>
 <arg>css=input[placeholder="seu@email.com"]</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:53:46.220092" elapsed="9.518186"/>
+<status status="FAIL" start="2026-02-03T09:18:23.464287" elapsed="10.008176">Error: Could not find active page</status>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-02-03T08:53:55.739169" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
 <arg>css=input[placeholder="seu@email.com"]</arg>
 <arg>${INVALID_EMAIL}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:53:55.738540" elapsed="0.511705"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.472662" elapsed="0.000114"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:53:56.255398" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
 <arg>css=input[placeholder="password"]</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:53:56.250470" elapsed="0.005043"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.472890" elapsed="0.000085"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-02-03T08:53:56.256280" level="INFO">Fills the text 'senha_errada_123' in the given field.</msg>
 <arg>css=input[placeholder="password"]</arg>
 <arg>${INVALID_PASSWORD}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:53:56.255683" elapsed="0.511273"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.473081" elapsed="0.000082"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-02-03T08:53:56.767711" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
 <arg>role=button[name="Entrar"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:53:56.767171" elapsed="0.533472"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.473262" elapsed="0.000080"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:53:57.305389" level="INFO">Waited for Element with selector text=/Invalid login credentials/i at state visible</msg>
 <arg>text=/Invalid login credentials/i</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:53:57.300862" elapsed="0.004679"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.473442" elapsed="0.000080"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:46.219703" elapsed="11.085944"/>
+<status status="FAIL" start="2026-02-03T09:18:23.463829" elapsed="10.009816">Error: Could not find active page</status>
 </kw>
 <kw name="Reload" owner="Browser">
-<msg time="2026-02-03T08:53:57.883765" level="INFO">Reloaded page with options: {"waitUntil": "load"}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Reloads current active page.</doc>
-<status status="PASS" start="2026-02-03T08:53:57.305907" elapsed="0.578031"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.473853" elapsed="0.000110"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:53:57.896318" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
 <arg>css=input[placeholder="seu@email.com"]</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:53:57.884353" elapsed="0.012136"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.474116" elapsed="0.000090"/>
 </kw>
 <kw name="Login" owner="LoginPage">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:53:57.902776" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:53:57.897355" elapsed="0.005581"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-02-03T08:53:57.903710" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>${EMAIL}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:53:57.903123" elapsed="0.522842"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:53:58.430346" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
-<arg>css=input[placeholder="password"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:53:58.426187" elapsed="0.004310"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-02-03T08:53:58.431252" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
-<arg>css=input[placeholder="password"]</arg>
-<arg>${PASSWORD}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:53:58.430683" elapsed="0.512787"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-02-03T08:53:58.944241" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
-<arg>role=button[name="Entrar"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:53:58.943690" elapsed="0.522852"/>
-</kw>
-<status status="PASS" start="2026-02-03T08:53:57.896879" elapsed="1.569800"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.474433" elapsed="0.000091"/>
 </kw>
 <kw name="Validate Home Screen" owner="pages">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:53:59.472015" level="INFO">Waited for Element with selector role=link[name="Jogarei"] at state visible</msg>
-<arg>role=link[name="Jogarei"]</arg>
-<arg>visible</arg>
-<arg>5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:53:59.467402" elapsed="0.004758"/>
+<status status="NOT RUN" start="2026-02-03T09:18:33.474671" elapsed="0.000086"/>
 </kw>
-<status status="PASS" start="2026-02-03T08:53:59.466961" elapsed="0.005312"/>
-</kw>
-<msg time="2026-02-03T08:53:59.482342" level="INFO">Switching context to context=d24874a8-12d3-4f20-8c3c-eda1540c64f3 in CURRENT</msg>
-<msg time="2026-02-03T08:53:59.488800" level="INFO">Successfully changed active context: context=d24874a8-12d3-4f20-8c3c-eda1540c64f3</msg>
-<msg time="2026-02-03T08:53:59.502851" level="INFO">Successfully closed Context</msg>
+<msg time="2026-02-03T09:18:33.479275" level="INFO">Switching context to context=b9e7b530-8862-4c86-a822-6df7333b4959 in CURRENT</msg>
+<msg time="2026-02-03T09:18:33.480700" level="INFO">Successfully changed active context: context=b9e7b530-8862-4c86-a822-6df7333b4959</msg>
+<msg time="2026-02-03T09:18:33.486442" level="INFO">Successfully closed Context</msg>
 <tag>smoke</tag>
-<status status="PASS" start="2026-02-03T08:53:43.169766" elapsed="16.302737"/>
+<status status="FAIL" start="2026-02-03T09:18:21.623962" elapsed="11.850971">Error: Could not find active page</status>
 </test>
-<status status="PASS" start="2026-02-03T08:53:43.158952" elapsed="16.344792"/>
+<status status="FAIL" start="2026-02-03T09:18:21.615086" elapsed="11.872229"/>
 </suite>
 <suite id="s1-s2-s2" name="Flow" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional\flow.robot">
 <test id="s1-s2-s2-t1" name="Add-save-complete a game" line="12">
 <kw name="Open Website" owner="settings" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-02-03T08:53:59.526900" level="INFO">Switching browser to browser=6c7b3b3b-a378-43c1-a3ec-a56c3ed5220c</msg>
-<msg time="2026-02-03T08:53:59.529617" level="INFO">Successfully changed active browser: browser=6c7b3b3b-a378-43c1-a3ec-a56c3ed5220c</msg>
-<msg time="2026-02-03T08:53:59.529797" level="INFO">Reusing existing browser with id: browser=6c7b3b3b-a378-43c1-a3ec-a56c3ed5220c</msg>
+<msg time="2026-02-03T09:18:33.501100" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:33.502292" level="INFO">Successfully changed active browser: browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:33.502385" level="INFO">Reusing existing browser with id: browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
 <arg>chromium</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>slowMo=${VELOCIT}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-02-03T08:53:59.526046" elapsed="0.003837"/>
+<status status="PASS" start="2026-02-03T09:18:33.500510" elapsed="0.001933"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-02-03T08:53:59.531989" level="INFO">{
+<msg time="2026-02-03T09:18:33.503894" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -507,251 +447,67 @@
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "height": 720,
-    "width": 1280
+    "width": 1280,
+    "height": 720
   }
 }</msg>
-<msg time="2026-02-03T08:53:59.540925" level="INFO">Successfully created context. </msg>
-<msg time="2026-02-03T08:53:59.541031" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2026-02-03T09:18:33.511431" level="INFO">Successfully created context. </msg>
+<msg time="2026-02-03T09:18:33.511547" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-02-03T08:53:59.530199" elapsed="0.010937"/>
+<status status="PASS" start="2026-02-03T09:18:33.502621" elapsed="0.009027"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-02-03T08:54:00.353017" level="INFO">Successfully initialized new page object and opened url: https://ephemeral-alfajores-312419.netlify.app/login-register</msg>
+<msg time="2026-02-03T09:18:34.831743" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-02-03T09:18:34.831837" level="INFO">See also file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/GamesRobot/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-02-03T09:18:34.831937" level="FAIL">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-02-03T08:53:59.541386" elapsed="0.811836"/>
-</kw>
-<status status="PASS" start="2026-02-03T08:53:59.525505" elapsed="0.827830"/>
-</kw>
-<kw name="Ensure Logged In And Home" owner="settings">
-<kw name="Login" owner="LoginPage">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:01.701145" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:54:00.354474" elapsed="1.346918"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-02-03T08:54:01.702520" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>${EMAIL}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:54:01.701663" elapsed="0.515723"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:02.222422" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
-<arg>css=input[placeholder="password"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:54:02.217667" elapsed="0.004988"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-02-03T08:54:02.223732" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
-<arg>css=input[placeholder="password"]</arg>
-<arg>${PASSWORD}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:54:02.222868" elapsed="0.510683"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-02-03T08:54:02.734455" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
-<arg>role=button[name="Entrar"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:54:02.733798" elapsed="0.539616"/>
-</kw>
-<status status="PASS" start="2026-02-03T08:54:00.354153" elapsed="2.919505"/>
-</kw>
-<kw name="Validate Home Screen" owner="pages">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:04.091630" level="INFO">Waited for Element with selector role=link[name="Jogarei"] at state visible</msg>
-<arg>role=link[name="Jogarei"]</arg>
-<arg>visible</arg>
-<arg>5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:54:03.274459" elapsed="0.817392"/>
-</kw>
-<status status="PASS" start="2026-02-03T08:54:03.273914" elapsed="0.818088"/>
-</kw>
-<status status="PASS" start="2026-02-03T08:54:00.353664" elapsed="3.738411"/>
-</kw>
-<kw name="Saved game page" owner="pages">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:14.255135" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg time="2026-02-03T08:54:14.255325" level="INFO">See also file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/GamesRobot/results/playwright-log.txt for additional details.</msg>
-<msg time="2026-02-03T08:54:14.255689" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+<status status="FAIL" start="2026-02-03T09:18:33.511895" elapsed="1.339584">Error: page.goto: Target page, context or browser has been closed
 Call log:
-  - waiting for locator('svg[data-testid="BookmarkBorderIcon"]').first() to be visible
-</msg>
-<arg>css=svg[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="FAIL" start="2026-02-03T08:54:04.092905" elapsed="10.251732">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
-Call log:
-  - waiting for locator('svg[data-testid="BookmarkBorderIcon"]').first() to be visible
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
 </status>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${btn}</var>
-<arg>css=svg[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0 &gt;&gt; xpath=ancestor::button[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.344852" elapsed="0.000137"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${card}</var>
-<arg>${btn} &gt;&gt; xpath=ancestor::div[contains(@class,"relative")][1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.345095" elapsed="0.000088"/>
-</kw>
-<kw name="Get Text" owner="Browser">
-<var>${game_name}</var>
-<arg>${card} &gt;&gt; css=span &gt;&gt; nth=0</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.345291" elapsed="0.000088"/>
-</kw>
-<kw name="Strip String" owner="String">
-<var>${game_name}</var>
-<arg>${game_name}</arg>
-<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.345483" elapsed="0.000082"/>
-</kw>
-<kw name="Click" owner="Browser">
-<arg>css=[data-testid="BookmarkBorderIcon"] &gt;&gt; nth=0</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.345667" elapsed="0.000102"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Nome do jogo clicado: ${game_name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.345867" elapsed="0.000080"/>
-</kw>
-<kw name="Click" owner="Browser">
-<arg>role=link[name="Jogarei"] &gt;&gt; nth=0</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.346039" elapsed="0.000079"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>text=${game_name}</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.346224" elapsed="0.000109"/>
-</kw>
-<status status="FAIL" start="2026-02-03T08:54:04.092457" elapsed="10.254008">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+<status status="FAIL" start="2026-02-03T09:18:33.500072" elapsed="1.351584">Error: page.goto: Target page, context or browser has been closed
 Call log:
-  - waiting for locator('svg[data-testid="BookmarkBorderIcon"]').first() to be visible
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
 </status>
 </kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>svg[data-testid="SportsEsportsIcon"] &gt;&gt; nth=0</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.346708" elapsed="0.000127"/>
-</kw>
-<kw name="Click" owner="Browser">
-<arg>svg[data-testid="SportsEsportsIcon"] &gt;&gt; nth=0</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.347032" elapsed="0.000265"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>text="Jogo movido para Jogando!"</arg>
-<arg>attached</arg>
-<arg>500ms</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.347483" elapsed="0.000113"/>
-</kw>
-<kw name="Click page Jogando" owner="pages">
-<status status="NOT RUN" start="2026-02-03T08:54:14.347816" elapsed="0.000095"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.348048" elapsed="0.000089"/>
-</kw>
-<kw name="Click" owner="Browser">
-<arg>css=svg[data-testid="SportsScoreIcon"] &gt;&gt; nth=0</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.348285" elapsed="0.000088"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>role=button[name="Salvar"]</arg>
-<arg>state=visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:14.348603" elapsed="0.000108"/>
-</kw>
-<msg time="2026-02-03T08:54:14.355980" level="INFO">Switching context to context=a25abf22-a9f8-4f96-910b-b14bd420fa40 in CURRENT</msg>
-<msg time="2026-02-03T08:54:14.362641" level="INFO">Successfully changed active context: context=a25abf22-a9f8-4f96-910b-b14bd420fa40</msg>
-<msg time="2026-02-03T08:54:14.374479" level="INFO">Successfully closed Context</msg>
-<status status="FAIL" start="2026-02-03T08:53:59.521591" elapsed="14.827328">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+<msg time="2026-02-03T09:18:34.855763" level="INFO">Switching context to context=9285b757-ad49-4666-be54-21b77d976dd8 in CURRENT</msg>
+<msg time="2026-02-03T09:18:34.857097" level="INFO">Successfully changed active context: context=9285b757-ad49-4666-be54-21b77d976dd8</msg>
+<msg time="2026-02-03T09:18:34.861453" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2026-02-03T09:18:33.498514" elapsed="1.353396">Setup failed:
+Error: page.goto: Target page, context or browser has been closed
 Call log:
-  - waiting for locator('svg[data-testid="BookmarkBorderIcon"]').first() to be visible
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
 </status>
 </test>
-<status status="FAIL" start="2026-02-03T08:53:59.508003" elapsed="14.867696"/>
+<status status="FAIL" start="2026-02-03T09:18:33.490216" elapsed="1.372178"/>
 </suite>
 <suite id="s1-s2-s3" name="Games" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional\games.robot">
 <test id="s1-s2-s3-t1" name="Verify Tooltip Logout and exit button" line="25">
 <kw name="Open Website" owner="settings" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-02-03T08:54:14.396249" level="INFO">Switching browser to browser=6c7b3b3b-a378-43c1-a3ec-a56c3ed5220c</msg>
-<msg time="2026-02-03T08:54:14.398115" level="INFO">Successfully changed active browser: browser=6c7b3b3b-a378-43c1-a3ec-a56c3ed5220c</msg>
-<msg time="2026-02-03T08:54:14.398265" level="INFO">Reusing existing browser with id: browser=6c7b3b3b-a378-43c1-a3ec-a56c3ed5220c</msg>
+<msg time="2026-02-03T09:18:34.876390" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:34.877734" level="INFO">Successfully changed active browser: browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:34.877862" level="INFO">Reusing existing browser with id: browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
 <arg>chromium</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>slowMo=${VELOCIT}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-02-03T08:54:14.395607" elapsed="0.002728"/>
+<status status="PASS" start="2026-02-03T09:18:34.875703" elapsed="0.002221"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-02-03T08:54:14.400238" level="INFO">{
+<msg time="2026-02-03T09:18:34.879672" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -761,264 +517,570 @@ Call log:
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "height": 720,
-    "width": 1280
+    "width": 1280,
+    "height": 720
   }
 }</msg>
-<msg time="2026-02-03T08:54:14.407679" level="INFO">Successfully created context. </msg>
-<msg time="2026-02-03T08:54:14.407764" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2026-02-03T09:18:34.886086" level="INFO">Successfully created context. </msg>
+<msg time="2026-02-03T09:18:34.886173" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-02-03T08:54:14.398556" elapsed="0.009281"/>
+<status status="PASS" start="2026-02-03T09:18:34.878123" elapsed="0.008117"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-02-03T08:54:15.207112" level="INFO">Successfully initialized new page object and opened url: https://ephemeral-alfajores-312419.netlify.app/login-register</msg>
+<msg time="2026-02-03T09:18:35.790394" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-02-03T09:18:35.790484" level="INFO">See also file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/GamesRobot/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-02-03T09:18:35.790580" level="FAIL">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-02-03T08:54:14.408057" elapsed="0.799246"/>
+<status status="FAIL" start="2026-02-03T09:18:34.886422" elapsed="0.905784">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</status>
 </kw>
-<status status="PASS" start="2026-02-03T08:54:14.395173" elapsed="0.812233"/>
+<status status="FAIL" start="2026-02-03T09:18:34.875257" elapsed="0.917092">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</status>
 </kw>
-<kw name="Ensure Logged In And Home" owner="settings">
-<kw name="Login" owner="LoginPage">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:16.546849" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:54:15.208550" elapsed="1.338481"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-02-03T08:54:16.547932" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>${EMAIL}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:54:16.547231" elapsed="0.512684"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:17.064803" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
-<arg>css=input[placeholder="password"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:54:17.060134" elapsed="0.004910"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-02-03T08:54:17.066337" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
-<arg>css=input[placeholder="password"]</arg>
-<arg>${PASSWORD}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:54:17.065356" elapsed="0.510189"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-02-03T08:54:17.576360" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
-<arg>role=button[name="Entrar"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:54:17.575774" elapsed="0.536258"/>
-</kw>
-<status status="PASS" start="2026-02-03T08:54:15.208135" elapsed="2.904051"/>
-</kw>
-<kw name="Validate Home Screen" owner="pages">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:18.117670" level="INFO">Waited for Element with selector role=link[name="Jogarei"] at state visible</msg>
-<arg>role=link[name="Jogarei"]</arg>
-<arg>visible</arg>
-<arg>5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:54:18.112749" elapsed="0.005092"/>
-</kw>
-<status status="PASS" start="2026-02-03T08:54:18.112357" elapsed="0.005592"/>
-</kw>
-<status status="PASS" start="2026-02-03T08:54:15.207703" elapsed="2.910298"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:18.421501" level="INFO">Waited for Element with selector css=input[placeholder*="Pesquise"] at state visible</msg>
-<arg>css=input[placeholder*="Pesquise"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:54:18.118273" elapsed="0.303403"/>
-</kw>
-<kw name="Hover" owner="Browser">
-<arg>text="Sair"</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the virtual mouse and scrolls to the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-03T08:54:18.422015" elapsed="0.525006"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-03T08:54:18.951576" level="INFO">Waited for Element with selector text="Sair" at state visible</msg>
-<arg>text="Sair"</arg>
-<arg>visible</arg>
-<arg>5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-03T08:54:18.947437" elapsed="0.004297"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-02-03T08:54:18.952522" level="INFO">Clicks the element 'text="Sair"'.</msg>
-<msg time="2026-02-03T08:54:19.371675" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2026-02-03T08:54:19.371765" level="INFO">See also file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/GamesRobot/results/playwright-log.txt for additional details.</msg>
-<msg time="2026-02-03T08:54:19.371874" level="FAIL">Execution terminated by signal</msg>
-<arg>text="Sair"</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="FAIL" start="2026-02-03T08:54:18.951996" elapsed="0.455167">Execution terminated by signal</status>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>css=input[placeholder="seu@email.com"]</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:19.407499" elapsed="0.000131"/>
-</kw>
-<kw name="Get Url" owner="Browser">
-<var>${current_url}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the current URL.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:19.407815" elapsed="0.000100"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${current_url}</arg>
-<arg>/login</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:19.408079" elapsed="0.000093"/>
-</kw>
-<status status="FAIL" start="2026-02-03T08:54:14.393452" elapsed="5.014970">Execution terminated by signal</status>
+<msg time="2026-02-03T09:18:35.795971" level="INFO">Switching context to context=94a76894-8a9f-475d-8393-42976d5de606 in CURRENT</msg>
+<msg time="2026-02-03T09:18:35.797159" level="INFO">Successfully changed active context: context=94a76894-8a9f-475d-8393-42976d5de606</msg>
+<msg time="2026-02-03T09:18:35.801351" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2026-02-03T09:18:34.873592" elapsed="0.918984">Setup failed:
+Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</status>
 </test>
 <test id="s1-s2-s3-t2" name="Search Games" line="36">
 <kw name="Open Website" owner="settings" type="SETUP">
 <kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:35.805153" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:35.806220" level="INFO">Successfully changed active browser: browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:35.806339" level="INFO">Reusing existing browser with id: browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
 <arg>chromium</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>slowMo=${VELOCIT}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="FAIL" start="2026-02-03T08:54:19.438721" elapsed="0.000706">Execution terminated by signal</status>
+<status status="PASS" start="2026-02-03T09:18:35.804521" elapsed="0.001878"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-02-03T09:18:35.808004" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-02-03T09:18:35.814433" level="INFO">Successfully created context. </msg>
+<msg time="2026-02-03T09:18:35.814521" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-02-03T09:18:35.806597" elapsed="0.007990"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-02-03T09:18:36.660597" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-02-03T09:18:36.660694" level="INFO">See also file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/GamesRobot/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-02-03T09:18:36.660793" level="FAIL">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="FAIL" start="2026-02-03T09:18:35.814771" elapsed="0.847629">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:35.804025" elapsed="0.858515">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</status>
+</kw>
+<msg time="2026-02-03T09:18:36.665613" level="INFO">Switching context to context=e828f04b-ae9b-4f37-a6e5-eb8b7bae51ac in CURRENT</msg>
+<msg time="2026-02-03T09:18:36.667233" level="INFO">Successfully changed active context: context=e828f04b-ae9b-4f37-a6e5-eb8b7bae51ac</msg>
+<msg time="2026-02-03T09:18:36.671372" level="INFO">Successfully closed Context</msg>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-02-03T09:18:35.802140" elapsed="0.860634">Setup failed:
+Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://ephemeral-alfajores-312419.netlify.app/login-register", waiting until "load"
+</status>
+</test>
+<test id="s1-s2-s3-t3" name="Search Nonexistent Game" line="47">
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:36.675207" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:36.676143" level="INFO">Successfully changed active browser: browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:36.676298" level="INFO">Reusing existing browser with id: browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-02-03T09:18:36.674593" elapsed="0.001768"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-02-03T09:18:36.678063" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-02-03T09:18:36.684863" level="INFO">Successfully created context. </msg>
+<msg time="2026-02-03T09:18:36.684944" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-02-03T09:18:36.676576" elapsed="0.008435"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-02-03T09:18:39.684303" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:54879: ConnectEx: Connection refused (No connection could be made because the target machine actively refused it.
+ -- 10061)</msg>
+<msg time="2026-02-03T09:18:39.684769" level="INFO">See also file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/GamesRobot/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-02-03T09:18:39.684918" level="FAIL">IOCP/Socket: Connection reset (An existing connection was forcibly closed by the remote host.
+ -- 10054)</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="FAIL" start="2026-02-03T09:18:36.685190" elapsed="3.001587">IOCP/Socket: Connection reset (An existing connection was forcibly closed by the remote host.
+ -- 10054)</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:36.674155" elapsed="3.012784">IOCP/Socket: Connection reset (An existing connection was forcibly closed by the remote host.
+ -- 10054)</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:36.672181" elapsed="3.014951">Setup failed:
+IOCP/Socket: Connection reset (An existing connection was forcibly closed by the remote host.
+ -- 10054)</status>
+</test>
+<test id="s1-s2-s3-t4" name="Randomness Message Game Noexistent" line="55">
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.690645" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.690725" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.690037" elapsed="0.001862">ConnectionError: Playwright process has been terminated with code 1</status>
 </kw>
 <kw name="New Context" owner="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:19.439640" elapsed="0.000206"/>
+<status status="NOT RUN" start="2026-02-03T09:18:39.692111" elapsed="0.000139"/>
 </kw>
 <kw name="New Page" owner="Browser">
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2026-02-03T08:54:19.439985" elapsed="0.000088"/>
+<status status="NOT RUN" start="2026-02-03T09:18:39.692354" elapsed="0.000083"/>
 </kw>
-<status status="FAIL" start="2026-02-03T08:54:19.438188" elapsed="0.002003">Execution terminated by signal</status>
+<status status="FAIL" start="2026-02-03T09:18:39.689711" elapsed="0.002835">ConnectionError: Playwright process has been terminated with code 1</status>
 </kw>
-<tag>smoke</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.437561" elapsed="0.002837">Setup failed:
-Execution terminated by signal</status>
-</test>
-<test id="s1-s2-s3-t3" name="Search Nonexistent Game" line="47">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.442130" elapsed="0.000372">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s2-s3-t4" name="Randomness Message Game Noexistent" line="55">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.444317" elapsed="0.000530">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2026-02-03T09:18:39.689258" elapsed="0.003494">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s3-t5" name="Verify save button game" line="94">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.446660" elapsed="0.000437">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.695772" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.695854" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.695233" elapsed="0.001721">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.697093" elapsed="0.000095"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.697291" elapsed="0.000082"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.694902" elapsed="0.002566">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.694456" elapsed="0.003302">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s3-t6" name="Validate Click Card Game" line="98">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.448876" elapsed="0.000549">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.701878" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.701976" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.701257" elapsed="0.001806">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.703208" elapsed="0.000094"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.703405" elapsed="0.000087"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.700703" elapsed="0.002887">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.699866" elapsed="0.003929">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s3-t7" name="Validate saved game page" line="102">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.451433" elapsed="0.000500">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.707234" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.707345" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.706585" elapsed="0.002210">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.709109" elapsed="0.000164"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.709417" elapsed="0.000126"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.706247" elapsed="0.003452">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.705725" elapsed="0.004421">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
-<status status="FAIL" start="2026-02-03T08:54:14.379475" elapsed="5.074507"/>
+<status status="FAIL" start="2026-02-03T09:18:34.865307" elapsed="4.847206"/>
 </suite>
 <suite id="s1-s2-s4" name="Jogando" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional\jogando.robot">
 <test id="s1-s2-s4-t1" name="Validate feedback pause game" line="34">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.456453" elapsed="0.000338">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.726361" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.726453" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.725681" elapsed="0.001894">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.727726" elapsed="0.000100"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.727928" elapsed="0.000086"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.725356" elapsed="0.002777">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.724886" elapsed="0.003465">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s4-t2" name="Validate modal stats" line="42">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.457159" elapsed="0.000255">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.732319" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.732467" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.731394" elapsed="0.002719">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.734424" elapsed="0.000208"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.734894" elapsed="0.000128"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.730901" elapsed="0.004283">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.730326" elapsed="0.005166">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s4-t3" name="Check not saved info" line="49">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.457758" elapsed="0.000281">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.740546" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.740658" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.739711" elapsed="0.002297">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.742197" elapsed="0.000121"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.742421" elapsed="0.000087"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.739093" elapsed="0.003530">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.738232" elapsed="0.004731">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s4-t4" name="Validate close modal stats" line="58">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.458348" elapsed="0.000248">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.747079" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.747218" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.746239" elapsed="0.002537">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.749031" elapsed="0.000142"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.749304" elapsed="0.000113"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.745857" elapsed="0.003711">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.745310" elapsed="0.004557">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s4-t5" name="Verify saved info" line="69">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.458928" elapsed="0.000265">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.754159" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.754294" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.753303" elapsed="0.002329">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.755885" elapsed="0.000121"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.756115" elapsed="0.000087"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.752870" elapsed="0.003447">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.752305" elapsed="0.004243">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
-<status status="FAIL" start="2026-02-03T08:54:19.455998" elapsed="0.003867"/>
+<status status="FAIL" start="2026-02-03T09:18:39.715259" elapsed="0.043212"/>
 </suite>
 <suite id="s1-s2-s5" name="Jogarei" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional\jogarei.robot">
 <test id="s1-s2-s5-t1" name="Validate feedback remove" line="12">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.460819" elapsed="0.000264">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.770222" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.770312" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.769606" elapsed="0.002265">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.772089" elapsed="0.000126"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.772319" elapsed="0.000088"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.769280" elapsed="0.003248">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.768829" elapsed="0.003916">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s5-t2" name="Validate feedback jogando" line="21">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.461563" elapsed="0.000316">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.776136" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.776220" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.775556" elapsed="0.001852">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.777618" elapsed="0.000119"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.777844" elapsed="0.000103"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.775193" elapsed="0.002896">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.774616" elapsed="0.003857">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
 <test id="s1-s2-s5-t3" name="Verify game in playing list" line="28">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2026-02-03T08:54:19.462198" elapsed="0.000252">Test execution stopped due to a fatal error.</status>
+<kw name="Open Website" owner="settings" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-03T09:18:39.782527" level="INFO">Switching browser to browser=5c1834eb-52bc-40be-868c-73e104e48865</msg>
+<msg time="2026-02-03T09:18:39.782666" level="FAIL">ConnectionError: Playwright process has been terminated with code 1</msg>
+<arg>chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>slowMo=${VELOCIT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-03T09:18:39.781654" elapsed="0.002446">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.784350" elapsed="0.000129"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-03T09:18:39.784586" elapsed="0.000090"/>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.781225" elapsed="0.003560">ConnectionError: Playwright process has been terminated with code 1</status>
+</kw>
+<status status="FAIL" start="2026-02-03T09:18:39.780634" elapsed="0.004383">Setup failed:
+ConnectionError: Playwright process has been terminated with code 1</status>
 </test>
-<status status="FAIL" start="2026-02-03T08:54:19.460431" elapsed="0.002404"/>
+<status status="FAIL" start="2026-02-03T09:18:39.760604" elapsed="0.026289"/>
 </suite>
-<status status="FAIL" start="2026-02-03T08:53:43.157542" elapsed="36.305972"/>
+<status status="FAIL" start="2026-02-03T09:18:21.613622" elapsed="18.175732"/>
 </suite>
-<status status="FAIL" start="2026-02-03T08:53:36.144548" elapsed="43.319600"/>
+<status status="FAIL" start="2026-02-03T09:18:15.315039" elapsed="24.475134"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="16" skip="0">All Tests</stat>
+<stat pass="1" fail="17" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat info="combined" combined="NOT robot:exit" pass="2" fail="3" skip="0">NOT robot:exit</stat>
-<stat pass="1" fail="1" skip="0">smoke</stat>
+<stat pass="0" fail="2" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="2" fail="16" skip="0">Tests</stat>
+<stat name="Tests" id="s1" pass="1" fail="17" skip="0">Tests</stat>
 <stat name="Api" id="s1-s1" pass="1" fail="0" skip="0">Tests.Api</stat>
 <stat name="Testapi" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Api.Testapi</stat>
-<stat name="Functional" id="s1-s2" pass="1" fail="16" skip="0">Tests.Functional</stat>
-<stat name="Checklogin" id="s1-s2-s1" pass="1" fail="0" skip="0">Tests.Functional.Checklogin</stat>
+<stat name="Functional" id="s1-s2" pass="0" fail="17" skip="0">Tests.Functional</stat>
+<stat name="Checklogin" id="s1-s2-s1" pass="0" fail="1" skip="0">Tests.Functional.Checklogin</stat>
 <stat name="Flow" id="s1-s2-s2" pass="0" fail="1" skip="0">Tests.Functional.Flow</stat>
 <stat name="Games" id="s1-s2-s3" pass="0" fail="7" skip="0">Tests.Functional.Games</stat>
 <stat name="Jogando" id="s1-s2-s4" pass="0" fail="5" skip="0">Tests.Functional.Jogando</stat>
@@ -1026,16 +1088,26 @@ Execution terminated by signal</status>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-02-03T08:53:39.038268" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
-<msg time="2026-02-03T08:53:41.280772" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
-<msg time="2026-02-03T08:54:19.436334" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: WSASend: Connection reset (An existing connection was forcibly closed by the remote host.
- -- 10054)</msg>
-<msg time="2026-02-03T08:54:19.441440" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 130</msg>
-<msg time="2026-02-03T08:54:19.443502" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 130</msg>
-<msg time="2026-02-03T08:54:19.446005" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 130</msg>
-<msg time="2026-02-03T08:54:19.448073" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 130</msg>
-<msg time="2026-02-03T08:54:19.450697" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 130</msg>
-<msg time="2026-02-03T08:54:19.453207" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 130</msg>
-<msg time="2026-02-03T08:54:19.455278" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 130</msg>
+<msg time="2026-02-03T09:18:18.100684" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2026-02-03T09:18:20.261689" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2026-02-03T09:18:39.684303" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:54879: ConnectEx: Connection refused (No connection could be made because the target machine actively refused it.
+ -- 10061)</msg>
+<msg time="2026-02-03T09:18:39.688621" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.693708" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.698901" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.704887" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.711524" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.714218" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.729477" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.736859" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.744290" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.751283" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.757523" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.759890" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.773734" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.779726" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.786023" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
+<msg time="2026-02-03T09:18:39.788345" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: ConnectionError: Playwright process has been terminated with code 1</msg>
 </errors>
 </robot>

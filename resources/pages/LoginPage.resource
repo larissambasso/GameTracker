@@ -1,6 +1,6 @@
 *** Settings ***
 Library    Browser
-Resource   ../../data/users.resource
+Resource   ../../access/users.resource
 
 *** Keywords ***
 

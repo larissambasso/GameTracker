@@ -3,7 +3,7 @@ Library    Browser
 Library    Collections
 Library    String
 
-Resource    ./resources/pages.resource
+Resource    resources/components/pages.resource
 Resource    ./config/endpoints.resource
 Resource    ./resources/pages/LoginPage.resource
 

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../resources/pages.resource
+Resource    ../../resources/components/pages.resource
 Resource    ../../resources/pages/LoginPage.resource
 Resource    ../../settings.resource
 
