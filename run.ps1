@@ -14,5 +14,9 @@ Get-Content .env | ForEach-Object {
   Set-Item -Path "Env:$key" -Value $val
 }
 
-# roda os testes
-robot -d results tests
+# roda os testes passando os argumentos externos
+if ($args.Count -gt 0) {
+    robot -d results @args tests
+} else {
+    robot -d results tests
+}

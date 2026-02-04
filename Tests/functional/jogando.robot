@@ -25,6 +25,29 @@ Select Rating
     ...    visible
     ...    5s
 
+Saved info game
+    Click page Jogando
+    Wait For Elements State    css=svg[data-testid="SportsScoreIcon"] >> nth=0   visible    10s
+    Click    css=svg[data-testid="SportsScoreIcon"] >> nth=0
+    Wait For Elements State    role=button[name="Salvar"]    state=visible    timeout=10s
+    Set Hours And Minutes    9    47
+    Click    css=select[name="platform_used"]
+    Select Options By    css=select[name="platform_used"]    label    PlayStation 2
+    Click    css=select[name="completion_type"]
+    Select Options By    css=select[name="completion_type"]    label    Campanha Principal
+    Select conclusion date
+    Select Rating    4
+    Click    css=label:has(span:has-text("Complicado"))
+
+Save And Check On Stats
+    ${game}=    Get Text    css=h2
+    ${game}=    Strip String    ${game}
+    Log To Console    Jogo salvo: ${game}
+    Click    role=button[name="Salvar"]
+    Click    role=link[name="Stats"]
+    Wait For Elements State    css=tr:has-text("${game}") >> nth=0    visible    10s
+
+
 
 
 *** Test Cases ***
@@ -62,21 +85,14 @@ Validate close modal stats
     Click    css=[data-testid="CloseIcon"]
     Wait For Elements State    css=svg[data-testid="SportsScoreIcon"] >> nth=0    visible    10s
 
-
-
 Verify saved info
     Ensure Logged In And Home
-    Click page Jogando
-    Wait For Elements State    css=svg[data-testid="SportsScoreIcon"] >> nth=0   visible    10s
-    Click    css=svg[data-testid="SportsScoreIcon"] >> nth=0
-    Wait For Elements State    role=button[name="Salvar"]    state=visible    timeout=10s
-    Set Hours And Minutes    9    47
-    Click    css=select[name="platform_used"]
-    Select Options By    css=select[name="platform_used"]    label    PlayStation 2
-    Click    css=select[name="completion_type"]
-    Select Options By    css=select[name="completion_type"]    label    Campanha Principal
-    Select conclusion date
-    Select Rating    4
+    Saved info game
+
+Verify game in Stats page
+    Ensure Logged In And Home
+    Saved info game
+    Save And Check On Stats
 
 
 
