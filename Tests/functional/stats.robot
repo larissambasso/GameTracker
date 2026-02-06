@@ -49,13 +49,44 @@ Log times and Total
     Log To Console    Total: ${days} dias ${hours} horas e ${minutes} minutos
     ${total_games}=    Set Variable    Total: ${days} dias ${hours} horas e ${minutes} minutos
     Should Be Equal    ${total_txt}    ${total_games}
+
+
+Zerados Counter Should Be
+    [Arguments]    ${expected}
+    ${after_txt}=    Get Text    xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]
+    ${after}=        Convert To Integer    ${after_txt}
+    Should Be Equal As Integers    ${after}    ${expected}
     
 
 
 *** Test Cases ***
 Log each game time
     Ensure Logged In And Home
-    Click    role=link[name="Stats"]
+    Click page Stats
     Log times and Total
     Log To Console     Soma das horas OK
+
+Validate edit game
+    Ensure Logged In And Home
+    Click page Stats
+    Wait For Elements State    role=button[name="Editar"] >> nth=0    visible    10s
+    Click    role=button[name="Editar"] >> nth=0
+    Wait For Elements State    role=button[name="Salvar"]    state=visible    timeout=10s
+
+Validate delete game
+    Ensure Logged In And Home
+    Click page Stats
+    ${zerados}=    Get Text    xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]
+    Log To Console    Quantidade de Jogos Zerados=${zerados}
+    ${before}=      Convert To Integer    ${zerados}
+    ${expected}=    Evaluate    ${before} - 1
+
+    Wait For Elements State    role=button[name="Excluir"] >> nth=0    visible    10s
+    Click    role=button[name="Excluir"] >> nth=0
+    Wait For Elements State    text="Atenção: Ação Irreversível"    state=visible    timeout=10s
+    Click    role=button[name="Sim, excluir"]
+    
+    Wait Until Keyword Succeeds    10s    500ms    Zerados Counter Should Be    ${expected}
+    ${zerados}=    Get Text    xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]
+    Log To Console    Quantidade de Jogos Zerados=${zerados}
 

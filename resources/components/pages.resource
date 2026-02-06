@@ -25,6 +25,11 @@ Click page Jogando
     Wait For Elements State    role=link[name="Jogando"]    visible    10s
     Click                      role=link[name="Jogando"]
 
+Click page Stats
+    Wait For Elements State    role=link[name="Stats"]    visible    10s
+    Click                      role=link[name="Stats"] 
+      
+
 Saved game page
     Wait For Elements State    css=svg[data-testid="BookmarkBorderIcon"] >> nth=0    visible    10s
     ${btn}=    Set Variable    css=svg[data-testid="BookmarkBorderIcon"] >> nth=0 >> xpath=ancestor::button[1]
