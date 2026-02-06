@@ -1,4 +1,5 @@
 *** Settings ***
+Library    String
 Resource    ../../settings.resource
 
 
@@ -32,10 +33,13 @@ Log times and Total
     ${r}=     Evaluate    int(${r}) % (24*60)
     ${hh}=    Evaluate    int(${r}) // 60
     ${mi}=    Evaluate    int(${r}) % 60
-    Log To Console    TOTAL: ${mm}m ${dd}d ${hh}h ${mi}m
 
+    ${dd2}=    Format String    {:02d}    ${dd}
+    ${hh2}=    Format String    {:02d}    ${hh}
+    ${mi2}=    Format String    {:02d}    ${mi}
+    Log To Console    Total: ${dd2} dias ${hh2} horas e ${mi2} minutos
+    ${total_txt}=    Set Variable    Total: ${dd2} dias ${hh2} horas e ${mi2} minutos
 
-Log Total Playtime
 
     ${months}=    Get Text    css=span.tabular-nums >> nth=0
     ${days}=      Get Text    css=span.tabular-nums >> nth=1
@@ -43,8 +47,9 @@ Log Total Playtime
     ${minutes}=   Get Text    css=span.tabular-nums >> nth=3
 
     Log To Console    Total: ${days} dias ${hours} horas e ${minutes} minutos
-
-
+    ${total_games}=    Set Variable    Total: ${days} dias ${hours} horas e ${minutes} minutos
+    Should Be Equal    ${total_txt}    ${total_games}
+    
 
 
 *** Test Cases ***
@@ -52,4 +57,5 @@ Log each game time
     Ensure Logged In And Home
     Click    role=link[name="Stats"]
     Log times and Total
-    Log Total Playtime
+    Log To Console     Soma das horas OK
+
