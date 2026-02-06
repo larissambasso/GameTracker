@@ -6,20 +6,34 @@ Test Setup    Open Website
 
 
 *** Keywords ***
-Log each game time
+Log times and Total
     Wait For Elements State    css=div.hidden.md\\:block tbody > tr.group >> nth=0    visible    10s
     ${count}=    Get Element Count    css=div.hidden.md\\:block tbody > tr.group
+    ${total}=    Set Variable    0
 
     FOR    ${i}    IN RANGE    ${count}
-        ${status}    ${time}=    Run Keyword And Ignore Error
+        ${st}    ${t}=    Run Keyword And Ignore Error
         ...    Get Text    css=div.hidden.md\\:block tbody > tr.group >> nth=${i} >> td:nth-child(4) span.font-mono.text-xs.font-semibold
 
-        IF    '${status}' == 'PASS'
-            Log To Console    Linha ${i+1}: ${time}
+        IF    '${st}' == 'PASS'
+            ${t}=    Strip String    ${t}
+            Log To Console    Linha ${i+1}: ${t}
+            ${h}=    Evaluate    (__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")
+            ${m}=    Evaluate    (__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")
+            ${total}=    Evaluate    int(${total}) + int(${h})*60 + int(${m})
         ELSE
-            Log To Console    Linha ${i+1}: (sem tempo nessa linha)
+            Log To Console    Linha ${i+1}: (sem tempo)
         END
     END
+
+    ${mm}=    Evaluate    int(${total}) // (30*24*60)
+    ${r}=     Evaluate    int(${total}) % (30*24*60)
+    ${dd}=    Evaluate    int(${r}) // (24*60)
+    ${r}=     Evaluate    int(${r}) % (24*60)
+    ${hh}=    Evaluate    int(${r}) // 60
+    ${mi}=    Evaluate    int(${r}) % 60
+    Log To Console    TOTAL: ${mm}m ${dd}d ${hh}h ${mi}m
+
 
 Log Total Playtime
 
@@ -37,5 +51,5 @@ Log Total Playtime
 Log each game time
     Ensure Logged In And Home
     Click    role=link[name="Stats"]
-    Log each game time
+    Log times and Total
     Log Total Playtime

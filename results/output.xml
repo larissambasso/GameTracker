@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-05T22:04:48.327587" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-05T22:25:29.416266" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests">
 <suite id="s1-s1" name="Functional" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional">
 <suite id="s1-s1-s1" name="Stats" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional\stats.robot">
-<test id="s1-s1-s1-t1" name="Log each game time" line="37">
+<test id="s1-s1-s1-t1" name="Log each game time" line="51">
 <kw name="Open Website" owner="settings" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-02-05T22:04:48.585265" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 500.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\danie\\OneDrive\\\u00c1rea de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\f6241fcb-6d64-4a32-b154-7e6c6df60584"}</msg>
-<msg time="2026-02-05T22:04:48.738472" level="INFO">Starting Browser process C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:60431</msg>
-<msg time="2026-02-05T22:04:50.132817" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":500,"timeout":30000,"tracesDir":"C:\\Users\\danie\\OneDrive\\Área de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\f6241fcb-6d64-4a32-b154-7e6c6df60584"}</msg>
+<msg time="2026-02-05T22:25:29.686013" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 500.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\danie\\OneDrive\\\u00c1rea de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\491ff7eb-26e3-4116-a237-58e26f6db64a"}</msg>
+<msg time="2026-02-05T22:25:29.838196" level="INFO">Starting Browser process C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:53337</msg>
+<msg time="2026-02-05T22:25:31.256539" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":500,"timeout":30000,"tracesDir":"C:\\Users\\danie\\OneDrive\\Área de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\491ff7eb-26e3-4116-a237-58e26f6db64a"}</msg>
 <arg>chromium</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>slowMo=${VELOCIT}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-02-05T22:04:48.584513" elapsed="1.548594"/>
+<status status="PASS" start="2026-02-05T22:25:29.685203" elapsed="1.571565"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-02-05T22:04:50.135328" level="INFO">{
+<msg time="2026-02-05T22:25:31.259177" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -32,522 +32,800 @@
     "width": 1280
   }
 }</msg>
-<msg time="2026-02-05T22:04:50.152116" level="INFO">Successfully created context. </msg>
-<msg time="2026-02-05T22:04:50.152244" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2026-02-05T22:25:31.278469" level="INFO">Successfully created context. </msg>
+<msg time="2026-02-05T22:25:31.278590" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-02-05T22:04:50.133457" elapsed="0.018901"/>
+<status status="PASS" start="2026-02-05T22:25:31.257038" elapsed="0.021666"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-02-05T22:04:51.192444" level="INFO">Successfully initialized new page object and opened url: https://ephemeral-alfajores-312419.netlify.app/login-register</msg>
+<msg time="2026-02-05T22:25:32.122487" level="INFO">Successfully initialized new page object and opened url: https://ephemeral-alfajores-312419.netlify.app/login-register</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-02-05T22:04:50.152626" elapsed="1.040003"/>
+<status status="PASS" start="2026-02-05T22:25:31.279019" elapsed="0.843654"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:48.583761" elapsed="2.608989"/>
+<status status="PASS" start="2026-02-05T22:25:29.684432" elapsed="2.438365"/>
 </kw>
 <kw name="Ensure Logged In And Home" owner="settings">
 <kw name="Login" owner="LoginPage">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-05T22:04:54.055366" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
+<msg time="2026-02-05T22:25:33.516907" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
 <arg>css=input[placeholder="seu@email.com"]</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-05T22:04:51.193859" elapsed="2.861671"/>
+<status status="PASS" start="2026-02-05T22:25:32.123979" elapsed="1.393099"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-02-05T22:04:54.056312" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
+<msg time="2026-02-05T22:25:33.517884" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
 <arg>css=input[placeholder="seu@email.com"]</arg>
 <arg>${EMAIL}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:54.055723" elapsed="0.525577"/>
+<status status="PASS" start="2026-02-05T22:25:33.517282" elapsed="0.518177"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-05T22:04:54.585839" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
+<msg time="2026-02-05T22:25:34.040524" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
 <arg>css=input[placeholder="password"]</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-05T22:04:54.581520" elapsed="0.004443"/>
+<status status="PASS" start="2026-02-05T22:25:34.035675" elapsed="0.004998"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-02-05T22:04:54.586695" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
+<msg time="2026-02-05T22:25:34.041439" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
 <arg>css=input[placeholder="password"]</arg>
 <arg>${PASSWORD}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:54.586137" elapsed="0.511540"/>
+<status status="PASS" start="2026-02-05T22:25:34.040861" elapsed="0.523214"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-02-05T22:04:55.098476" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
+<msg time="2026-02-05T22:25:34.564982" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
 <arg>role=button[name="Entrar"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:55.097901" elapsed="0.550147"/>
+<status status="PASS" start="2026-02-05T22:25:34.564375" elapsed="0.545872"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:51.193583" elapsed="4.454608"/>
+<status status="PASS" start="2026-02-05T22:25:32.123696" elapsed="2.986689"/>
 </kw>
 <kw name="Validate Home Screen" owner="pages">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-05T22:04:56.473560" level="INFO">Waited for Element with selector role=link[name="Jogarei"] at state visible</msg>
+<msg time="2026-02-05T22:25:35.423606" level="INFO">Waited for Element with selector role=link[name="Jogarei"] at state visible</msg>
 <arg>role=link[name="Jogarei"]</arg>
 <arg>visible</arg>
 <arg>5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-05T22:04:55.648794" elapsed="0.824925"/>
+<status status="PASS" start="2026-02-05T22:25:35.110976" elapsed="0.312809"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:55.648376" elapsed="0.825453"/>
+<status status="PASS" start="2026-02-05T22:25:35.110560" elapsed="0.313383"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:51.193085" elapsed="5.280798"/>
+<status status="PASS" start="2026-02-05T22:25:32.123188" elapsed="3.300829"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-02-05T22:04:56.474693" level="INFO">Clicks the element 'role=link[name="Stats"]'.</msg>
+<msg time="2026-02-05T22:25:35.425128" level="INFO">Clicks the element 'role=link[name="Stats"]'.</msg>
 <arg>role=link[name="Stats"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:56.474133" elapsed="0.541738"/>
+<status status="PASS" start="2026-02-05T22:25:35.424428" elapsed="0.552603"/>
 </kw>
-<kw name="Log each game time">
+<kw name="Log times and Total">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-05T22:04:59.873699" level="INFO">Waited for Element with selector css=div.hidden.md\:block tbody &gt; tr.group &gt;&gt; nth=0 at state visible</msg>
+<msg time="2026-02-05T22:25:36.306761" level="INFO">Waited for Element with selector css=div.hidden.md\:block tbody &gt; tr.group &gt;&gt; nth=0 at state visible</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=0</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-05T22:04:57.016763" elapsed="2.857189"/>
+<status status="PASS" start="2026-02-05T22:25:35.978321" elapsed="0.328627"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-02-05T22:04:59.881096" level="INFO">${count} = 8</msg>
+<msg time="2026-02-05T22:25:36.314115" level="INFO">${count} = 8</msg>
 <var>${count}</var>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.874235" elapsed="0.006918"/>
+<status status="PASS" start="2026-02-05T22:25:36.307165" elapsed="0.007018"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.315025" level="INFO">${total} = 0</msg>
+<var>${total}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.314444" elapsed="0.000619"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:04:59.908331" level="INFO">Text: '3h2m'</msg>
+<msg time="2026-02-05T22:25:36.340261" level="INFO">Text: '3h2m'</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.882670" elapsed="0.025760"/>
+<status status="PASS" start="2026-02-05T22:25:36.316378" elapsed="0.024014"/>
 </kw>
-<msg time="2026-02-05T22:04:59.908640" level="INFO">${status} = PASS</msg>
-<msg time="2026-02-05T22:04:59.908681" level="INFO">${time} = 3h2m</msg>
-<var>${status}</var>
-<var>${time}</var>
+<msg time="2026-02-05T22:25:36.340587" level="INFO">${st} = PASS</msg>
+<msg time="2026-02-05T22:25:36.340628" level="INFO">${t} = 3h2m</msg>
+<var>${st}</var>
+<var>${t}</var>
 <arg>Get Text</arg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.882091" elapsed="0.026612"/>
+<status status="PASS" start="2026-02-05T22:25:36.315881" elapsed="0.024769"/>
 </kw>
 <if>
-<branch type="IF" condition="'${status}' == 'PASS'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: ${time}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.909167" elapsed="0.000839"/>
+<branch type="IF" condition="'${st}' == 'PASS'">
+<kw name="Strip String" owner="String">
+<msg time="2026-02-05T22:25:36.341459" level="INFO">${t} = 3h2m</msg>
+<var>${t}</var>
+<arg>${t}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.341172" elapsed="0.000315"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:59.908825" elapsed="0.001296"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Linha ${i+1}: ${t}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.341588" elapsed="0.000949"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.343223" level="INFO">${h} = 3</msg>
+<var>${h}</var>
+<arg>(__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.342656" elapsed="0.000594"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.343794" level="INFO">${m} = 2</msg>
+<var>${m}</var>
+<arg>(__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.343351" elapsed="0.000470"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.344379" level="INFO">${total} = 182</msg>
+<var>${total}</var>
+<arg>int(${total}) + int(${h})*60 + int(${m})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.343924" elapsed="0.000497"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:36.340774" elapsed="0.003721"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: (sem tempo nessa linha)</arg>
+<arg>Linha ${i+1}: (sem tempo)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-05T22:04:59.910509" elapsed="0.000117"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.344801" elapsed="0.000092"/>
 </kw>
-<status status="NOT RUN" start="2026-02-05T22:04:59.910201" elapsed="0.000483"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.344558" elapsed="0.000383"/>
 </branch>
-<status status="PASS" start="2026-02-05T22:04:59.908791" elapsed="0.001946"/>
+<status status="PASS" start="2026-02-05T22:25:36.340740" elapsed="0.004241"/>
 </if>
 <var name="${i}">0</var>
-<status status="PASS" start="2026-02-05T22:04:59.881836" elapsed="0.028945"/>
+<status status="PASS" start="2026-02-05T22:25:36.315638" elapsed="0.029372"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:04:59.923259" level="INFO">Text: '9h47m'</msg>
+<msg time="2026-02-05T22:25:36.357801" level="INFO">Text: '9h47m'</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.911568" elapsed="0.011777"/>
+<status status="PASS" start="2026-02-05T22:25:36.345719" elapsed="0.012185"/>
 </kw>
-<msg time="2026-02-05T22:04:59.923519" level="INFO">${status} = PASS</msg>
-<msg time="2026-02-05T22:04:59.923575" level="INFO">${time} = 9h47m</msg>
-<var>${status}</var>
-<var>${time}</var>
+<msg time="2026-02-05T22:25:36.358072" level="INFO">${st} = PASS</msg>
+<msg time="2026-02-05T22:25:36.358111" level="INFO">${t} = 9h47m</msg>
+<var>${st}</var>
+<var>${t}</var>
 <arg>Get Text</arg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.911186" elapsed="0.012420"/>
+<status status="PASS" start="2026-02-05T22:25:36.345375" elapsed="0.012757"/>
 </kw>
 <if>
-<branch type="IF" condition="'${status}' == 'PASS'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: ${time}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.924109" elapsed="0.000836"/>
+<branch type="IF" condition="'${st}' == 'PASS'">
+<kw name="Strip String" owner="String">
+<msg time="2026-02-05T22:25:36.358853" level="INFO">${t} = 9h47m</msg>
+<var>${t}</var>
+<arg>${t}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.358587" elapsed="0.000293"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:59.923742" elapsed="0.001316"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Linha ${i+1}: ${t}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.358978" elapsed="0.000790"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.360665" level="INFO">${h} = 9</msg>
+<var>${h}</var>
+<arg>(__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.360015" elapsed="0.000687"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.361290" level="INFO">${m} = 47</msg>
+<var>${m}</var>
+<arg>(__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.360809" elapsed="0.000522"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.362270" level="INFO">${total} = 769</msg>
+<var>${total}</var>
+<arg>int(${total}) + int(${h})*60 + int(${m})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.361570" elapsed="0.000741"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:36.358251" elapsed="0.004133"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: (sem tempo nessa linha)</arg>
+<arg>Linha ${i+1}: (sem tempo)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-05T22:04:59.925452" elapsed="0.000098"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.362694" elapsed="0.000115"/>
 </kw>
-<status status="NOT RUN" start="2026-02-05T22:04:59.925113" elapsed="0.000487"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.362453" elapsed="0.000417"/>
 </branch>
-<status status="PASS" start="2026-02-05T22:04:59.923712" elapsed="0.001922"/>
+<status status="PASS" start="2026-02-05T22:25:36.358223" elapsed="0.004689"/>
 </if>
 <var name="${i}">1</var>
-<status status="PASS" start="2026-02-05T22:04:59.910986" elapsed="0.014675"/>
+<status status="PASS" start="2026-02-05T22:25:36.345192" elapsed="0.017754"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:04:59.937155" level="INFO">Text: '9h47m'</msg>
+<msg time="2026-02-05T22:25:36.376520" level="INFO">Text: '9h47m'</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.926357" elapsed="0.010899"/>
+<status status="PASS" start="2026-02-05T22:25:36.363862" elapsed="0.012760"/>
 </kw>
-<msg time="2026-02-05T22:04:59.937417" level="INFO">${status} = PASS</msg>
-<msg time="2026-02-05T22:04:59.937455" level="INFO">${time} = 9h47m</msg>
-<var>${status}</var>
-<var>${time}</var>
+<msg time="2026-02-05T22:25:36.376786" level="INFO">${st} = PASS</msg>
+<msg time="2026-02-05T22:25:36.376827" level="INFO">${t} = 9h47m</msg>
+<var>${st}</var>
+<var>${t}</var>
 <arg>Get Text</arg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.926001" elapsed="0.011478"/>
+<status status="PASS" start="2026-02-05T22:25:36.363426" elapsed="0.013423"/>
 </kw>
 <if>
-<branch type="IF" condition="'${status}' == 'PASS'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: ${time}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.938040" elapsed="0.000955"/>
+<branch type="IF" condition="'${st}' == 'PASS'">
+<kw name="Strip String" owner="String">
+<msg time="2026-02-05T22:25:36.377625" level="INFO">${t} = 9h47m</msg>
+<var>${t}</var>
+<arg>${t}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.377321" elapsed="0.000339"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:59.937582" elapsed="0.001661"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Linha ${i+1}: ${t}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.377800" elapsed="0.000880"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.379301" level="INFO">${h} = 9</msg>
+<var>${h}</var>
+<arg>(__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.378821" elapsed="0.000574"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.380013" level="INFO">${m} = 47</msg>
+<var>${m}</var>
+<arg>(__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.379501" elapsed="0.000540"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.380722" level="INFO">${total} = 1356</msg>
+<var>${total}</var>
+<arg>int(${total}) + int(${h})*60 + int(${m})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.380142" elapsed="0.000619"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:36.376955" elapsed="0.003868"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: (sem tempo nessa linha)</arg>
+<arg>Linha ${i+1}: (sem tempo)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-05T22:04:59.939605" elapsed="0.000242"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.381142" elapsed="0.000126"/>
 </kw>
-<status status="NOT RUN" start="2026-02-05T22:04:59.939291" elapsed="0.000609"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.380893" elapsed="0.000441"/>
 </branch>
-<status status="PASS" start="2026-02-05T22:04:59.937558" elapsed="0.002375"/>
+<status status="PASS" start="2026-02-05T22:25:36.376930" elapsed="0.004454"/>
 </if>
 <var name="${i}">2</var>
-<status status="PASS" start="2026-02-05T22:04:59.925835" elapsed="0.014123"/>
+<status status="PASS" start="2026-02-05T22:25:36.363193" elapsed="0.018230"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:04:59.952030" level="INFO">Text: '9h47m'</msg>
+<msg time="2026-02-05T22:25:36.394201" level="INFO">Text: '9h47m'</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.940812" elapsed="0.011313"/>
+<status status="PASS" start="2026-02-05T22:25:36.382364" elapsed="0.011976"/>
 </kw>
-<msg time="2026-02-05T22:04:59.952285" level="INFO">${status} = PASS</msg>
-<msg time="2026-02-05T22:04:59.952325" level="INFO">${time} = 9h47m</msg>
-<var>${status}</var>
-<var>${time}</var>
+<msg time="2026-02-05T22:25:36.394551" level="INFO">${st} = PASS</msg>
+<msg time="2026-02-05T22:25:36.394610" level="INFO">${t} = 9h47m</msg>
+<var>${st}</var>
+<var>${t}</var>
 <arg>Get Text</arg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.940439" elapsed="0.011907"/>
+<status status="PASS" start="2026-02-05T22:25:36.381889" elapsed="0.012754"/>
 </kw>
 <if>
-<branch type="IF" condition="'${status}' == 'PASS'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: ${time}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.952816" elapsed="0.000733"/>
+<branch type="IF" condition="'${st}' == 'PASS'">
+<kw name="Strip String" owner="String">
+<msg time="2026-02-05T22:25:36.395581" level="INFO">${t} = 9h47m</msg>
+<var>${t}</var>
+<arg>${t}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.395252" elapsed="0.000371"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:59.952450" elapsed="0.001162"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Linha ${i+1}: ${t}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.395762" elapsed="0.000971"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.397315" level="INFO">${h} = 9</msg>
+<var>${h}</var>
+<arg>(__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.396847" elapsed="0.000496"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.397832" level="INFO">${m} = 47</msg>
+<var>${m}</var>
+<arg>(__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.397445" elapsed="0.000414"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.398408" level="INFO">${total} = 1943</msg>
+<var>${total}</var>
+<arg>int(${total}) + int(${h})*60 + int(${m})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.397969" elapsed="0.000467"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:36.394790" elapsed="0.003729"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: (sem tempo nessa linha)</arg>
+<arg>Linha ${i+1}: (sem tempo)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-05T22:04:59.953840" elapsed="0.000098"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.398808" elapsed="0.000119"/>
 </kw>
-<status status="NOT RUN" start="2026-02-05T22:04:59.953659" elapsed="0.000340"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.398580" elapsed="0.000410"/>
 </branch>
-<status status="PASS" start="2026-02-05T22:04:59.952427" elapsed="0.001606"/>
+<status status="PASS" start="2026-02-05T22:25:36.394759" elapsed="0.004266"/>
 </if>
 <var name="${i}">3</var>
-<status status="PASS" start="2026-02-05T22:04:59.940162" elapsed="0.013895"/>
+<status status="PASS" start="2026-02-05T22:25:36.381662" elapsed="0.017387"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:04:59.965486" level="INFO">Text: '9h47m'</msg>
+<msg time="2026-02-05T22:25:36.412613" level="INFO">Text: '9h47m'</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.954751" elapsed="0.010866"/>
+<status status="PASS" start="2026-02-05T22:25:36.399826" elapsed="0.012906"/>
 </kw>
-<msg time="2026-02-05T22:04:59.965789" level="INFO">${status} = PASS</msg>
-<msg time="2026-02-05T22:04:59.965858" level="INFO">${time} = 9h47m</msg>
-<var>${status}</var>
-<var>${time}</var>
+<msg time="2026-02-05T22:25:36.412942" level="INFO">${st} = PASS</msg>
+<msg time="2026-02-05T22:25:36.412987" level="INFO">${t} = 9h47m</msg>
+<var>${st}</var>
+<var>${t}</var>
 <arg>Get Text</arg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.954386" elapsed="0.011494"/>
+<status status="PASS" start="2026-02-05T22:25:36.399451" elapsed="0.013559"/>
 </kw>
 <if>
-<branch type="IF" condition="'${status}' == 'PASS'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: ${time}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.966484" elapsed="0.000984"/>
+<branch type="IF" condition="'${st}' == 'PASS'">
+<kw name="Strip String" owner="String">
+<msg time="2026-02-05T22:25:36.413989" level="INFO">${t} = 9h47m</msg>
+<var>${t}</var>
+<arg>${t}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.413656" elapsed="0.000366"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:59.965997" elapsed="0.001524"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Linha ${i+1}: ${t}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.414151" elapsed="0.000887"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.415676" level="INFO">${h} = 9</msg>
+<var>${h}</var>
+<arg>(__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.415146" elapsed="0.000565"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.416661" level="INFO">${m} = 47</msg>
+<var>${m}</var>
+<arg>(__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.415846" elapsed="0.000916"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.417924" level="INFO">${total} = 2530</msg>
+<var>${total}</var>
+<arg>int(${total}) + int(${h})*60 + int(${m})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.416958" elapsed="0.001002"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:36.413150" elapsed="0.004935"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: (sem tempo nessa linha)</arg>
+<arg>Linha ${i+1}: (sem tempo)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-05T22:04:59.967753" elapsed="0.000114"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.418652" elapsed="0.000128"/>
 </kw>
-<status status="NOT RUN" start="2026-02-05T22:04:59.967566" elapsed="0.000362"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.418253" elapsed="0.000674"/>
 </branch>
-<status status="PASS" start="2026-02-05T22:04:59.965963" elapsed="0.002007"/>
+<status status="PASS" start="2026-02-05T22:25:36.413111" elapsed="0.005865"/>
 </if>
 <var name="${i}">4</var>
-<status status="PASS" start="2026-02-05T22:04:59.954205" elapsed="0.013799"/>
+<status status="PASS" start="2026-02-05T22:25:36.399249" elapsed="0.019762"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:04:59.980190" level="INFO">Text: '9h47m'</msg>
+<msg time="2026-02-05T22:25:36.436113" level="INFO">Text: '9h47m'</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.968766" elapsed="0.011527"/>
+<status status="PASS" start="2026-02-05T22:25:36.420032" elapsed="0.016224"/>
 </kw>
-<msg time="2026-02-05T22:04:59.980450" level="INFO">${status} = PASS</msg>
-<msg time="2026-02-05T22:04:59.980489" level="INFO">${time} = 9h47m</msg>
-<var>${status}</var>
-<var>${time}</var>
+<msg time="2026-02-05T22:25:36.436508" level="INFO">${st} = PASS</msg>
+<msg time="2026-02-05T22:25:36.436579" level="INFO">${t} = 9h47m</msg>
+<var>${st}</var>
+<var>${t}</var>
 <arg>Get Text</arg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.968415" elapsed="0.012096"/>
+<status status="PASS" start="2026-02-05T22:25:36.419554" elapsed="0.017064"/>
 </kw>
 <if>
-<branch type="IF" condition="'${status}' == 'PASS'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: ${time}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.980988" elapsed="0.000714"/>
+<branch type="IF" condition="'${st}' == 'PASS'">
+<kw name="Strip String" owner="String">
+<msg time="2026-02-05T22:25:36.437643" level="INFO">${t} = 9h47m</msg>
+<var>${t}</var>
+<arg>${t}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.437305" elapsed="0.000372"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:59.980615" elapsed="0.001137"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Linha ${i+1}: ${t}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.437812" elapsed="0.001134"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.439759" level="INFO">${h} = 9</msg>
+<var>${h}</var>
+<arg>(__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.439096" elapsed="0.000701"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.440535" level="INFO">${m} = 47</msg>
+<var>${m}</var>
+<arg>(__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.439951" elapsed="0.000632"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.441385" level="INFO">${total} = 3117</msg>
+<var>${total}</var>
+<arg>int(${total}) + int(${h})*60 + int(${m})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.440727" elapsed="0.000691"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:36.436782" elapsed="0.004691"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: (sem tempo nessa linha)</arg>
+<arg>Linha ${i+1}: (sem tempo)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-05T22:04:59.982004" elapsed="0.000118"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.441732" elapsed="0.000108"/>
 </kw>
-<status status="NOT RUN" start="2026-02-05T22:04:59.981793" elapsed="0.000388"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.441530" elapsed="0.000379"/>
 </branch>
-<status status="PASS" start="2026-02-05T22:04:59.980591" elapsed="0.001631"/>
+<status status="PASS" start="2026-02-05T22:25:36.436747" elapsed="0.005216"/>
 </if>
 <var name="${i}">5</var>
-<status status="PASS" start="2026-02-05T22:04:59.968204" elapsed="0.014047"/>
+<status status="PASS" start="2026-02-05T22:25:36.419307" elapsed="0.022696"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:04:59.993973" level="INFO">Text: '20h'</msg>
+<msg time="2026-02-05T22:25:36.461791" level="INFO">Text: '20h'</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.982908" elapsed="0.011174"/>
+<status status="PASS" start="2026-02-05T22:25:36.442915" elapsed="0.019018"/>
 </kw>
-<msg time="2026-02-05T22:04:59.994250" level="INFO">${status} = PASS</msg>
-<msg time="2026-02-05T22:04:59.994288" level="INFO">${time} = 20h</msg>
-<var>${status}</var>
-<var>${time}</var>
+<msg time="2026-02-05T22:25:36.462159" level="INFO">${st} = PASS</msg>
+<msg time="2026-02-05T22:25:36.462213" level="INFO">${t} = 20h</msg>
+<var>${st}</var>
+<var>${t}</var>
 <arg>Get Text</arg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.982599" elapsed="0.011710"/>
+<status status="PASS" start="2026-02-05T22:25:36.442489" elapsed="0.019753"/>
 </kw>
 <if>
-<branch type="IF" condition="'${status}' == 'PASS'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: ${time}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.994793" elapsed="0.000720"/>
+<branch type="IF" condition="'${st}' == 'PASS'">
+<kw name="Strip String" owner="String">
+<msg time="2026-02-05T22:25:36.463267" level="INFO">${t} = 20h</msg>
+<var>${t}</var>
+<arg>${t}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.462905" elapsed="0.000398"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:04:59.994418" elapsed="0.001146"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Linha ${i+1}: ${t}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.463439" elapsed="0.001173"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.465589" level="INFO">${h} = 20</msg>
+<var>${h}</var>
+<arg>(__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.464908" elapsed="0.000712"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.466156" level="INFO">${m} = 0</msg>
+<var>${m}</var>
+<arg>(__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.465730" elapsed="0.000454"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.466802" level="INFO">${total} = 4317</msg>
+<var>${total}</var>
+<arg>int(${total}) + int(${h})*60 + int(${m})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.466294" elapsed="0.000547"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:36.462383" elapsed="0.004517"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: (sem tempo nessa linha)</arg>
+<arg>Linha ${i+1}: (sem tempo)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-05T22:04:59.995792" elapsed="0.000090"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.467180" elapsed="0.000114"/>
 </kw>
-<status status="NOT RUN" start="2026-02-05T22:04:59.995607" elapsed="0.000322"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.466965" elapsed="0.000397"/>
 </branch>
-<status status="PASS" start="2026-02-05T22:04:59.994390" elapsed="0.001571"/>
+<status status="PASS" start="2026-02-05T22:25:36.462351" elapsed="0.005061"/>
 </if>
 <var name="${i}">6</var>
-<status status="PASS" start="2026-02-05T22:04:59.982415" elapsed="0.013568"/>
+<status status="PASS" start="2026-02-05T22:25:36.442279" elapsed="0.025169"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:05:00.005079" level="INFO">Text: '20h'</msg>
+<msg time="2026-02-05T22:25:36.482464" level="INFO">Text: '20h'</msg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.996584" elapsed="0.008590"/>
+<status status="PASS" start="2026-02-05T22:25:36.468343" elapsed="0.014246"/>
 </kw>
-<msg time="2026-02-05T22:05:00.005331" level="INFO">${status} = PASS</msg>
-<msg time="2026-02-05T22:05:00.005370" level="INFO">${time} = 20h</msg>
-<var>${status}</var>
-<var>${time}</var>
+<msg time="2026-02-05T22:25:36.482840" level="INFO">${st} = PASS</msg>
+<msg time="2026-02-05T22:25:36.482882" level="INFO">${t} = 20h</msg>
+<var>${st}</var>
+<var>${t}</var>
 <arg>Get Text</arg>
 <arg>css=div.hidden.md\\:block tbody &gt; tr.group &gt;&gt; nth=${i} &gt;&gt; td:nth-child(4) span.font-mono.text-xs.font-semibold</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2026-02-05T22:04:59.996280" elapsed="0.009111"/>
+<status status="PASS" start="2026-02-05T22:25:36.467902" elapsed="0.015001"/>
 </kw>
 <if>
-<branch type="IF" condition="'${status}' == 'PASS'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: ${time}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:05:00.005857" elapsed="0.000714"/>
+<branch type="IF" condition="'${st}' == 'PASS'">
+<kw name="Strip String" owner="String">
+<msg time="2026-02-05T22:25:36.483871" level="INFO">${t} = 20h</msg>
+<var>${t}</var>
+<arg>${t}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.483538" elapsed="0.000368"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:05:00.005493" elapsed="0.001130"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Linha ${i+1}: ${t}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.484032" elapsed="0.000914"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.485825" level="INFO">${h} = 20</msg>
+<var>${h}</var>
+<arg>(__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.485074" elapsed="0.000779"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.486345" level="INFO">${m} = 0</msg>
+<var>${m}</var>
+<arg>(__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.485956" elapsed="0.000416"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.486911" level="INFO">${total} = 5517</msg>
+<var>${total}</var>
+<arg>int(${total}) + int(${h})*60 + int(${m})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.486470" elapsed="0.000474"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:36.483048" elapsed="0.003952"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Linha ${i+1}: (sem tempo nessa linha)</arg>
+<arg>Linha ${i+1}: (sem tempo)</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-05T22:05:00.006859" elapsed="0.000115"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.487253" elapsed="0.000105"/>
 </kw>
-<status status="NOT RUN" start="2026-02-05T22:05:00.006660" elapsed="0.000378"/>
+<status status="NOT RUN" start="2026-02-05T22:25:36.487057" elapsed="0.000356"/>
 </branch>
-<status status="PASS" start="2026-02-05T22:05:00.005469" elapsed="0.001602"/>
+<status status="PASS" start="2026-02-05T22:25:36.483015" elapsed="0.004439"/>
 </if>
 <var name="${i}">7</var>
-<status status="PASS" start="2026-02-05T22:04:59.996124" elapsed="0.010970"/>
+<status status="PASS" start="2026-02-05T22:25:36.467682" elapsed="0.019802"/>
 </iter>
 <var>${i}</var>
 <value>${count}</value>
-<status status="PASS" start="2026-02-05T22:04:59.881305" elapsed="0.125834"/>
+<status status="PASS" start="2026-02-05T22:25:36.315207" elapsed="0.172336"/>
 </for>
-<status status="PASS" start="2026-02-05T22:04:57.016333" elapsed="2.990889"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.488099" level="INFO">${mm} = 0</msg>
+<var>${mm}</var>
+<arg>int(${total}) // (30*24*60)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.487687" elapsed="0.000445"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.488815" level="INFO">${r} = 5517</msg>
+<var>${r}</var>
+<arg>int(${total}) % (30*24*60)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.488254" elapsed="0.000595"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.489393" level="INFO">${dd} = 3</msg>
+<var>${dd}</var>
+<arg>int(${r}) // (24*60)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.488974" elapsed="0.000451"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.489957" level="INFO">${r} = 1197</msg>
+<var>${r}</var>
+<arg>int(${r}) % (24*60)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.489548" elapsed="0.000442"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.490516" level="INFO">${hh} = 19</msg>
+<var>${hh}</var>
+<arg>int(${r}) // 60</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.490115" elapsed="0.000433"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-05T22:25:36.491048" level="INFO">${mi} = 57</msg>
+<var>${mi}</var>
+<arg>int(${r}) % 60</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.490680" elapsed="0.000394"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>TOTAL: ${mm}m ${dd}d ${hh}h ${mi}m</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-05T22:25:36.491169" elapsed="0.000479"/>
+</kw>
+<status status="PASS" start="2026-02-05T22:25:35.977780" elapsed="0.513966"/>
 </kw>
 <kw name="Log Total Playtime">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:05:00.019906" level="INFO">Text: '00'</msg>
-<msg time="2026-02-05T22:05:00.020064" level="INFO">${months} = 00</msg>
+<msg time="2026-02-05T22:25:36.505633" level="INFO">Text: '00'</msg>
+<msg time="2026-02-05T22:25:36.505803" level="INFO">${months} = 00</msg>
 <var>${months}</var>
 <arg>css=span.tabular-nums &gt;&gt; nth=0</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:05:00.007831" elapsed="0.012258"/>
+<status status="PASS" start="2026-02-05T22:25:36.492281" elapsed="0.013548"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:05:00.030824" level="INFO">Text: '03'</msg>
-<msg time="2026-02-05T22:05:00.031024" level="INFO">${days} = 03</msg>
+<msg time="2026-02-05T22:25:36.516191" level="INFO">Text: '03'</msg>
+<msg time="2026-02-05T22:25:36.516369" level="INFO">${days} = 03</msg>
 <var>${days}</var>
 <arg>css=span.tabular-nums &gt;&gt; nth=1</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:05:00.020279" elapsed="0.010805"/>
+<status status="PASS" start="2026-02-05T22:25:36.506056" elapsed="0.010339"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:05:00.040636" level="INFO">Text: '19'</msg>
-<msg time="2026-02-05T22:05:00.040775" level="INFO">${hours} = 19</msg>
+<msg time="2026-02-05T22:25:36.526646" level="INFO">Text: '19'</msg>
+<msg time="2026-02-05T22:25:36.526797" level="INFO">${hours} = 19</msg>
 <var>${hours}</var>
 <arg>css=span.tabular-nums &gt;&gt; nth=2</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:05:00.031288" elapsed="0.009513"/>
+<status status="PASS" start="2026-02-05T22:25:36.516624" elapsed="0.010198"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-05T22:05:00.048302" level="INFO">Text: '57'</msg>
-<msg time="2026-02-05T22:05:00.048442" level="INFO">${minutes} = 57</msg>
+<msg time="2026-02-05T22:25:36.535196" level="INFO">Text: '57'</msg>
+<msg time="2026-02-05T22:25:36.535345" level="INFO">${minutes} = 57</msg>
 <var>${minutes}</var>
 <arg>css=span.tabular-nums &gt;&gt; nth=3</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-05T22:05:00.040976" elapsed="0.007493"/>
+<status status="PASS" start="2026-02-05T22:25:36.527006" elapsed="0.008364"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Total: ${days} dias ${hours} horas e ${minutes} minutos</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-05T22:05:00.048641" elapsed="0.000571"/>
+<status status="PASS" start="2026-02-05T22:25:36.535545" elapsed="0.000574"/>
 </kw>
-<status status="PASS" start="2026-02-05T22:05:00.007451" elapsed="0.041837"/>
+<status status="PASS" start="2026-02-05T22:25:36.491966" elapsed="0.044229"/>
 </kw>
-<msg time="2026-02-05T22:05:00.057716" level="INFO">Switching context to context=19114de4-a720-4cb6-b040-4b6697f48f2c in CURRENT</msg>
-<msg time="2026-02-05T22:05:00.063637" level="INFO">Successfully changed active context: context=19114de4-a720-4cb6-b040-4b6697f48f2c</msg>
-<msg time="2026-02-05T22:05:00.080200" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-02-05T22:04:48.583041" elapsed="11.466421"/>
+<msg time="2026-02-05T22:25:36.543321" level="INFO">Switching context to context=6fb97944-7a89-44a1-a99e-e87241233aaa in CURRENT</msg>
+<msg time="2026-02-05T22:25:36.548404" level="INFO">Successfully changed active context: context=6fb97944-7a89-44a1-a99e-e87241233aaa</msg>
+<msg time="2026-02-05T22:25:36.566051" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-02-05T22:25:29.683665" elapsed="6.852705"/>
 </test>
-<status status="PASS" start="2026-02-05T22:04:48.363822" elapsed="11.717527"/>
+<status status="PASS" start="2026-02-05T22:25:29.452184" elapsed="7.115563"/>
 </suite>
-<status status="PASS" start="2026-02-05T22:04:48.362505" elapsed="11.723739"/>
+<status status="PASS" start="2026-02-05T22:25:29.451072" elapsed="7.121184"/>
 </suite>
-<status status="PASS" start="2026-02-05T22:04:48.329149" elapsed="11.757972"/>
+<status status="PASS" start="2026-02-05T22:25:29.417766" elapsed="7.155256"/>
 </suite>
 <statistics>
 <total>
