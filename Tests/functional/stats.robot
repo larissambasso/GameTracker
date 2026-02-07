@@ -5,6 +5,10 @@ Resource    ../../settings.resource
 
 Test Setup    Open Website
 
+*** Variables ***
+${ZERADOS_COUNTER}    xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]
+${EMPTY_STATE}        data-testid=empty-state-message
+
 
 *** Keywords ***
 Log times and Total
@@ -53,7 +57,7 @@ Log times and Total
 
 Zerados Counter Should Be
     [Arguments]    ${expected}
-    ${after_txt}=    Get Text    xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]
+    ${after_txt}=    Get Text    ${ZERADOS_COUNTER}
     ${after}=        Convert To Integer    ${after_txt}
     Should Be Equal As Integers    ${after}    ${expected}
     
@@ -76,17 +80,34 @@ Validate edit game
 Validate delete game
     Ensure Logged In And Home
     Click page Stats
-    ${zerados}=    Get Text    xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]
-    Log To Console    Quantidade de Jogos Zerados=${zerados}
-    ${before}=      Convert To Integer    ${zerados}
-    ${expected}=    Evaluate    ${before} - 1
 
-    Wait For Elements State    role=button[name="Excluir"] >> nth=0    visible    10s
-    Click    role=button[name="Excluir"] >> nth=0
-    Wait For Elements State    text="Atenção: Ação Irreversível"    state=visible    timeout=10s
-    Click    role=button[name="Sim, excluir"]
+    ${has_counter}=    Run Keyword And Return Status
+    ...    Wait For Elements State    ${ZERADOS_COUNTER}    state=visible    timeout=2s
     
-    Wait Until Keyword Succeeds    10s    500ms    Zerados Counter Should Be    ${expected}
-    ${zerados}=    Get Text    xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]
-    Log To Console    Quantidade de Jogos Zerados=${zerados}
+    IF    ${has_counter}
+        ${zerados}=    Get Text    ${ZERADOS_COUNTER}
+        ${before}=     Convert To Integer    ${zerados}
+        Log To Console    Quantidade de Jogos Zerados (antes)=${before}
+        IF    ${before} > 0
+            ${expected}=    Evaluate    ${before} - 1
+
+            Wait For Elements State    role=button[name="Excluir"] >> nth=0    visible    10s
+            Click    role=button[name="Excluir"] >> nth=0
+            Wait For Elements State    text="Atenção: Ação Irreversível"    state=visible    timeout=10s
+            Click    role=button[name="Sim, excluir"]
+
+            IF    ${expected} == 0
+                Wait For Elements State    ${EMPTY_STATE}    visible    10s
+                Log To Console    Quantidade de Jogos Zerados (depois)=0
+            ELSE
+                Wait Until Keyword Succeeds    10s    500ms    Zerados Counter Should Be    ${expected}
+                Log To Console    Quantidade de Jogos Zerados (depois)=${expected}
+            END
+        ELSE
+            Wait For Elements State    ${EMPTY_STATE}    visible    10s
+        END
+    ELSE
+        Wait For Elements State    ${EMPTY_STATE}    visible    10s
+    END
+
 

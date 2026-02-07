@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-06T10:26:47.817339" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-06T10:58:27.858953" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests">
 <suite id="s1-s1" name="Functional" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional">
 <suite id="s1-s1-s1" name="Stats" source="C:\Users\danie\OneDrive\Área de Trabalho\GamesRobot\tests\functional\stats.robot">
-<test id="s1-s1-s1-t1" name="Validate delete game" line="76">
+<test id="s1-s1-s1-t1" name="Validate delete game" line="80">
 <kw name="Open Website" owner="settings" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-02-06T10:26:48.064062" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 500.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\danie\\OneDrive\\\u00c1rea de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\9d84f319-31fe-476f-ac94-1457d65bf61a"}</msg>
-<msg time="2026-02-06T10:26:48.209855" level="INFO">Starting Browser process C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:58760</msg>
-<msg time="2026-02-06T10:26:49.588813" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":500,"timeout":30000,"tracesDir":"C:\\Users\\danie\\OneDrive\\Área de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\9d84f319-31fe-476f-ac94-1457d65bf61a"}</msg>
+<msg time="2026-02-06T10:58:28.106694" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 500.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\danie\\OneDrive\\\u00c1rea de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\3076c3bf-6b52-489f-8f20-7b3af91dc14e"}</msg>
+<msg time="2026-02-06T10:58:28.252402" level="INFO">Starting Browser process C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:55358</msg>
+<msg time="2026-02-06T10:58:29.642476" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":500,"timeout":30000,"tracesDir":"C:\\Users\\danie\\OneDrive\\Área de Trabalho\\GamesRobot\\results\\browser\\traces\\temp\\3076c3bf-6b52-489f-8f20-7b3af91dc14e"}</msg>
 <arg>chromium</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>slowMo=${VELOCIT}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-02-06T10:26:48.063254" elapsed="1.525861"/>
+<status status="PASS" start="2026-02-06T10:58:28.105952" elapsed="1.536870"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-02-06T10:26:49.591866" level="INFO">{
+<msg time="2026-02-06T10:58:29.645109" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -28,241 +28,338 @@
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "height": 720,
-    "width": 1280
+    "width": 1280,
+    "height": 720
   }
 }</msg>
-<msg time="2026-02-06T10:26:49.609527" level="INFO">Successfully created context. </msg>
-<msg time="2026-02-06T10:26:49.609663" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2026-02-06T10:58:29.663638" level="INFO">Successfully created context. </msg>
+<msg time="2026-02-06T10:58:29.663769" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-02-06T10:26:49.589470" elapsed="0.020311"/>
+<status status="PASS" start="2026-02-06T10:58:29.643172" elapsed="0.020711"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-02-06T10:26:50.437995" level="INFO">Successfully initialized new page object and opened url: https://ephemeral-alfajores-312419.netlify.app/login-register</msg>
+<msg time="2026-02-06T10:58:30.511650" level="INFO">Successfully initialized new page object and opened url: https://ephemeral-alfajores-312419.netlify.app/login-register</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-02-06T10:26:49.610064" elapsed="0.828130"/>
+<status status="PASS" start="2026-02-06T10:58:29.664233" elapsed="0.847606"/>
 </kw>
-<status status="PASS" start="2026-02-06T10:26:48.062465" elapsed="2.375916"/>
+<status status="PASS" start="2026-02-06T10:58:28.105222" elapsed="2.406741"/>
 </kw>
 <kw name="Ensure Logged In And Home" owner="settings">
 <kw name="Login" owner="LoginPage">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-06T10:26:51.788240" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
+<msg time="2026-02-06T10:58:31.896413" level="INFO">Waited for Element with selector css=input[placeholder="seu@email.com"] at state visible</msg>
 <arg>css=input[placeholder="seu@email.com"]</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-06T10:26:50.439571" elapsed="1.348825"/>
+<status status="PASS" start="2026-02-06T10:58:30.513034" elapsed="1.383553"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-02-06T10:26:51.789237" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
+<msg time="2026-02-06T10:58:31.897400" level="INFO">Fills the text 'test-user@larissa.com' in the given field.</msg>
 <arg>css=input[placeholder="seu@email.com"]</arg>
 <arg>${EMAIL}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:51.788593" elapsed="0.522657"/>
+<status status="PASS" start="2026-02-06T10:58:31.896812" elapsed="0.517200"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-06T10:26:52.315726" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
+<msg time="2026-02-06T10:58:32.419265" level="INFO">Waited for Element with selector css=input[placeholder="password"] at state visible</msg>
 <arg>css=input[placeholder="password"]</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-06T10:26:52.311465" elapsed="0.004418"/>
+<status status="PASS" start="2026-02-06T10:58:32.414230" elapsed="0.005187"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-02-06T10:26:52.316667" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
+<msg time="2026-02-06T10:58:32.420179" level="INFO">Fills the text 'Senha@123' in the given field.</msg>
 <arg>css=input[placeholder="password"]</arg>
 <arg>${PASSWORD}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:52.316078" elapsed="0.511845"/>
+<status status="PASS" start="2026-02-06T10:58:32.419605" elapsed="0.511256"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-02-06T10:26:52.828653" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
+<msg time="2026-02-06T10:58:32.931609" level="INFO">Clicks the element 'role=button[name="Entrar"]'.</msg>
 <arg>role=button[name="Entrar"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:52.828138" elapsed="0.533459"/>
+<status status="PASS" start="2026-02-06T10:58:32.931079" elapsed="0.542467"/>
 </kw>
-<status status="PASS" start="2026-02-06T10:26:50.439298" elapsed="2.922454"/>
+<status status="PASS" start="2026-02-06T10:58:30.512759" elapsed="2.960928"/>
 </kw>
 <kw name="Validate Home Screen" owner="pages">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-06T10:26:53.378428" level="INFO">Waited for Element with selector role=link[name="Jogarei"] at state visible</msg>
+<msg time="2026-02-06T10:58:34.284277" level="INFO">Waited for Element with selector role=link[name="Jogarei"] at state visible</msg>
 <arg>role=link[name="Jogarei"]</arg>
 <arg>visible</arg>
 <arg>5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.362369" elapsed="0.016221"/>
+<status status="PASS" start="2026-02-06T10:58:33.474294" elapsed="0.810138"/>
 </kw>
-<status status="PASS" start="2026-02-06T10:26:53.361946" elapsed="0.016761"/>
+<status status="PASS" start="2026-02-06T10:58:33.473863" elapsed="0.810681"/>
 </kw>
-<status status="PASS" start="2026-02-06T10:26:50.438827" elapsed="2.939936"/>
+<status status="PASS" start="2026-02-06T10:58:30.512288" elapsed="3.772312"/>
 </kw>
 <kw name="Click page Stats" owner="pages">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-06T10:26:53.383743" level="INFO">Waited for Element with selector role=link[name="Stats"] at state visible</msg>
+<msg time="2026-02-06T10:58:34.289769" level="INFO">Waited for Element with selector role=link[name="Stats"] at state visible</msg>
 <arg>role=link[name="Stats"]</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.379493" elapsed="0.004406"/>
+<status status="PASS" start="2026-02-06T10:58:34.285362" elapsed="0.004541"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-02-06T10:26:53.384596" level="INFO">Clicks the element 'role=link[name="Stats"]'.</msg>
+<msg time="2026-02-06T10:58:34.290609" level="INFO">Clicks the element 'role=link[name="Stats"]'.</msg>
 <arg>role=link[name="Stats"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.384079" elapsed="0.536070"/>
+<status status="PASS" start="2026-02-06T10:58:34.290084" elapsed="0.540727"/>
 </kw>
-<status status="PASS" start="2026-02-06T10:26:53.379084" elapsed="0.541197"/>
+<status status="PASS" start="2026-02-06T10:58:34.284930" elapsed="0.546011"/>
 </kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-02-06T10:58:35.048492" level="INFO">Waited for Element with selector xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1] at state visible</msg>
+<arg>${ZERADOS_COUNTER}</arg>
+<arg>state=visible</arg>
+<arg>timeout=2s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-02-06T10:58:34.831950" elapsed="0.216702"/>
+</kw>
+<msg time="2026-02-06T10:58:35.048846" level="INFO">${has_counter} = True</msg>
+<var>${has_counter}</var>
+<arg>Wait For Elements State</arg>
+<arg>${ZERADOS_COUNTER}</arg>
+<arg>state=visible</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-06T10:58:34.831342" elapsed="0.217555"/>
+</kw>
+<if>
+<branch type="IF" condition="${has_counter}">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-06T10:26:53.945116" level="INFO">Text: '4'</msg>
-<msg time="2026-02-06T10:26:53.945282" level="INFO">${zerados} = 4</msg>
+<msg time="2026-02-06T10:58:35.073962" level="INFO">Text: '3'</msg>
+<msg time="2026-02-06T10:58:35.074138" level="INFO">${zerados} = 3</msg>
 <var>${zerados}</var>
-<arg>xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]</arg>
+<arg>${ZERADOS_COUNTER}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.920535" elapsed="0.024781"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Quantidade de Jogos Zerados=${zerados}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.945607" elapsed="0.000564"/>
+<status status="PASS" start="2026-02-06T10:58:35.049549" elapsed="0.024619"/>
 </kw>
 <kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2026-02-06T10:26:53.946727" level="INFO">${before} = 4</msg>
+<msg time="2026-02-06T10:58:35.075102" level="INFO">${before} = 3</msg>
 <var>${before}</var>
 <arg>${zerados}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.946359" elapsed="0.000396"/>
+<status status="PASS" start="2026-02-06T10:58:35.074425" elapsed="0.000714"/>
 </kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Quantidade de Jogos Zerados (antes)=${before}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-06T10:58:35.075268" elapsed="0.000611"/>
+</kw>
+<if>
+<branch type="IF" condition="${before} &gt; 0">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-02-06T10:26:53.947330" level="INFO">${expected} = 3</msg>
+<msg time="2026-02-06T10:58:35.077137" level="INFO">${expected} = 2</msg>
 <var>${expected}</var>
 <arg>${before} - 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.946915" elapsed="0.000442"/>
+<status status="PASS" start="2026-02-06T10:58:35.076605" elapsed="0.000571"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-06T10:26:53.955747" level="INFO">Waited for Element with selector role=button[name="Excluir"] &gt;&gt; nth=0 at state visible</msg>
+<msg time="2026-02-06T10:58:35.085287" level="INFO">Waited for Element with selector role=button[name="Excluir"] &gt;&gt; nth=0 at state visible</msg>
 <arg>role=button[name="Excluir"] &gt;&gt; nth=0</arg>
 <arg>visible</arg>
 <arg>10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.947515" elapsed="0.008416"/>
+<status status="PASS" start="2026-02-06T10:58:35.077329" elapsed="0.008149"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-02-06T10:26:53.956760" level="INFO">Clicks the element 'role=button[name="Excluir"] &gt;&gt; nth=0'.</msg>
+<msg time="2026-02-06T10:58:35.086255" level="INFO">Clicks the element 'role=button[name="Excluir"] &gt;&gt; nth=0'.</msg>
 <arg>role=button[name="Excluir"] &gt;&gt; nth=0</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:53.956226" elapsed="0.626018"/>
+<status status="PASS" start="2026-02-06T10:58:35.085707" elapsed="0.555232"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-06T10:26:54.589060" level="INFO">Waited for Element with selector text="Atenção: Ação Irreversível" at state visible</msg>
+<msg time="2026-02-06T10:58:35.647374" level="INFO">Waited for Element with selector text="Atenção: Ação Irreversível" at state visible</msg>
 <arg>text="Atenção: Ação Irreversível"</arg>
 <arg>state=visible</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-06T10:26:54.582793" elapsed="0.006407"/>
+<status status="PASS" start="2026-02-06T10:58:35.641216" elapsed="0.006289"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-02-06T10:26:54.589975" level="INFO">Clicks the element 'role=button[name="Sim, excluir"]'.</msg>
+<msg time="2026-02-06T10:58:35.648198" level="INFO">Clicks the element 'role=button[name="Sim, excluir"]'.</msg>
 <arg>role=button[name="Sim, excluir"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:54.589461" elapsed="0.528669"/>
+<status status="PASS" start="2026-02-06T10:58:35.647683" elapsed="0.527829"/>
 </kw>
+<if>
+<branch type="IF" condition="${expected} == 0">
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${EMPTY_STATE}</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-02-06T10:58:36.176081" elapsed="0.000094"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Quantidade de Jogos Zerados (depois)=0</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-06T10:58:36.176292" elapsed="0.000086"/>
+</kw>
+<status status="NOT RUN" start="2026-02-06T10:58:36.175674" elapsed="0.000749"/>
+</branch>
+<branch type="ELSE">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Zerados Counter Should Be">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-06T10:26:55.134916" level="INFO">Text: '3'</msg>
-<msg time="2026-02-06T10:26:55.135076" level="INFO">${after_txt} = 3</msg>
+<msg time="2026-02-06T10:58:36.186114" level="INFO">Text: '3'</msg>
+<msg time="2026-02-06T10:58:36.186283" level="INFO">${after_txt} = 3</msg>
 <var>${after_txt}</var>
-<arg>xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]</arg>
+<arg>${ZERADOS_COUNTER}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:55.119911" elapsed="0.015191"/>
+<status status="PASS" start="2026-02-06T10:58:36.177780" elapsed="0.008530"/>
 </kw>
 <kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2026-02-06T10:26:55.135808" level="INFO">${after} = 3</msg>
+<msg time="2026-02-06T10:58:36.187016" level="INFO">${after} = 3</msg>
 <var>${after}</var>
 <arg>${after_txt}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2026-02-06T10:26:55.135304" elapsed="0.000531"/>
+<status status="PASS" start="2026-02-06T10:58:36.186501" elapsed="0.000543"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-02-06T10:58:36.187540" level="FAIL">3 != 2</msg>
+<arg>${after}</arg>
+<arg>${expected}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2026-02-06T10:58:36.187144" elapsed="0.000551">3 != 2</status>
+</kw>
+<arg>${expected}</arg>
+<status status="FAIL" start="2026-02-06T10:58:36.177317" elapsed="0.010505">3 != 2</status>
+</kw>
+<kw name="Zerados Counter Should Be">
+<kw name="Get Text" owner="Browser">
+<msg time="2026-02-06T10:58:36.697548" level="INFO">Text: '2'</msg>
+<msg time="2026-02-06T10:58:36.697691" level="INFO">${after_txt} = 2</msg>
+<var>${after_txt}</var>
+<arg>${ZERADOS_COUNTER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-02-06T10:58:36.689059" elapsed="0.008657"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-02-06T10:58:36.698358" level="INFO">${after} = 2</msg>
+<var>${after}</var>
+<arg>${after_txt}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-02-06T10:58:36.697897" elapsed="0.000487"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
 <arg>${after}</arg>
 <arg>${expected}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-06T10:26:55.135938" elapsed="0.000322"/>
+<status status="PASS" start="2026-02-06T10:58:36.698484" elapsed="0.000311"/>
 </kw>
 <arg>${expected}</arg>
-<status status="PASS" start="2026-02-06T10:26:55.119517" elapsed="0.016816"/>
+<status status="PASS" start="2026-02-06T10:58:36.688571" elapsed="0.010297"/>
 </kw>
 <arg>10s</arg>
 <arg>500ms</arg>
 <arg>Zerados Counter Should Be</arg>
 <arg>${expected}</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2026-02-06T10:26:55.118641" elapsed="0.017830"/>
-</kw>
-<kw name="Get Text" owner="Browser">
-<msg time="2026-02-06T10:26:55.145424" level="INFO">Text: '3'</msg>
-<msg time="2026-02-06T10:26:55.145587" level="INFO">${zerados} = 3</msg>
-<var>${zerados}</var>
-<arg>xpath=//span[normalize-space(.)="Zerados"]/ancestor::div[1]/following-sibling::span[1]</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-06T10:26:55.136828" elapsed="0.008789"/>
+<status status="PASS" start="2026-02-06T10:58:36.176632" elapsed="0.522290"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Quantidade de Jogos Zerados=${zerados}</arg>
+<arg>Quantidade de Jogos Zerados (depois)=${expected}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-06T10:26:55.145890" elapsed="0.000642"/>
+<status status="PASS" start="2026-02-06T10:58:36.699020" elapsed="0.000412"/>
 </kw>
-<msg time="2026-02-06T10:26:55.155988" level="INFO">Switching context to context=16b0395f-7dc8-47ea-88f3-456c7765f8f6 in CURRENT</msg>
-<msg time="2026-02-06T10:26:55.161367" level="INFO">Successfully changed active context: context=16b0395f-7dc8-47ea-88f3-456c7765f8f6</msg>
-<msg time="2026-02-06T10:26:55.177102" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-02-06T10:26:48.061684" elapsed="7.085090"/>
+<status status="PASS" start="2026-02-06T10:58:36.176467" elapsed="0.523056"/>
+</branch>
+<status status="PASS" start="2026-02-06T10:58:36.175644" elapsed="0.523944"/>
+</if>
+<status status="PASS" start="2026-02-06T10:58:35.076117" elapsed="1.623510"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${EMPTY_STATE}</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-02-06T10:58:36.699887" elapsed="0.000098"/>
+</kw>
+<status status="NOT RUN" start="2026-02-06T10:58:36.699681" elapsed="0.000358"/>
+</branch>
+<status status="PASS" start="2026-02-06T10:58:35.076067" elapsed="1.624006"/>
+</if>
+<status status="PASS" start="2026-02-06T10:58:35.049156" elapsed="1.650941"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${EMPTY_STATE}</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-02-06T10:58:36.700307" elapsed="0.000086"/>
+</kw>
+<status status="NOT RUN" start="2026-02-06T10:58:36.700153" elapsed="0.000293"/>
+</branch>
+<status status="PASS" start="2026-02-06T10:58:35.049108" elapsed="1.651369"/>
+</if>
+<msg time="2026-02-06T10:58:36.708129" level="INFO">Switching context to context=1e02d10b-e831-41d0-835b-1adc3bbce699 in CURRENT</msg>
+<msg time="2026-02-06T10:58:36.712917" level="INFO">Successfully changed active context: context=1e02d10b-e831-41d0-835b-1adc3bbce699</msg>
+<msg time="2026-02-06T10:58:36.729443" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-02-06T10:58:28.104565" elapsed="8.596067"/>
 </test>
-<status status="PASS" start="2026-02-06T10:26:47.851545" elapsed="7.327008"/>
+<status status="PASS" start="2026-02-06T10:58:27.893905" elapsed="8.837076"/>
 </suite>
-<status status="PASS" start="2026-02-06T10:26:47.850453" elapsed="7.332854"/>
+<status status="PASS" start="2026-02-06T10:58:27.892495" elapsed="8.842789"/>
 </suite>
-<status status="PASS" start="2026-02-06T10:26:47.818750" elapsed="7.365274"/>
+<status status="PASS" start="2026-02-06T10:58:27.860375" elapsed="8.875903"/>
 </suite>
 <statistics>
 <total>
