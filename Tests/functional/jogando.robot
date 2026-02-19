@@ -21,7 +21,7 @@ Select Rating
     [Arguments]    ${value}
     Click    css=div:has(> label:has-text("Sua Avaliação")) label:has(+ input[type="radio"][value="${value}"])
     Wait For Elements State
-    ...    css=span.text-2xl.font-black.text-yellow-500.w-10.text-right:has-text("7")
+    ...    css=span.text-2xl.font-black.text-yellow-500.w-10.text-right:has-text("8")
     ...    visible
     ...    5s
 
