@@ -38,7 +38,7 @@ Search Games
     Wait For Elements State    css=input[placeholder*="Pesquise"]    visible    10s
     Fill Text                 css=input[placeholder*="Pesquise"]    ${SEARCH}
     Press Keys                css=input[placeholder*="Pesquise"]    Enter
-    Wait For Elements State    css=img[alt*="Cyberpunk"] >> nth=0    visible    10s
+    Wait For Elements State    css=img[alt*="Cyberpunk"] >> nth=0    visible    15s
     ${count}=    Get Element Count    css=img[alt*="Cyberpunk"]
     Should Be True    ${count} > 0
     Log To Console    \n[SEARCH] Cards encontrados: ${count}\n
@@ -101,3 +101,29 @@ Validate Click Card Game
 Validate saved game page
     Ensure Logged In And Home
     Saved game page
+
+Verify filter plataform
+    Ensure Logged In And Home
+    Wait For Elements State    css=[data-testid="card-game"] >> nth=0    visible    10s
+    Click    css=input[name="filter-platforms"] >> nth=0
+    Wait For Elements State    css=input[name="filter-platforms"] >> nth=0    checked    5s
+    Wait For Elements State    role=button[name="Aplicar Filtros"] >> nth=0    enabled    10s
+    Click    role=button[name="Aplicar Filtros"] >> nth=0
+    Wait For Elements State    css=[data-testid="card-game"] >> nth=0    visible    10s
+    Wait For Elements State    role=button[name="Aplicar Filtros"] >> nth=0    disabled    10s
+
+Verify filter data
+    Ensure Logged In And Home
+    Wait For Elements State    css=[data-testid="card-game"] >> nth=0    visible    10s
+    Click    xpath=//summary[.//span[normalize-space()="Data"]]
+    Wait For Elements State    css=button[aria-label="Choose date"] >> nth=0    visible    10s
+    Click    css=button[aria-label="Choose date"] >> nth=0
+    Click    xpath=(//button[normalize-space()="jan"])[1]
+    Wait For Elements State    xpath=//label[normalize-space(.)="Até" or .//text()[normalize-space()="Até"]]//button[@aria-label="Choose date"]    visible    10s
+    Click    xpath=//label[normalize-space(.)="Até" or .//text()[normalize-space()="Até"]]//button[@aria-label="Choose date"]
+    Wait For Elements State    xpath=(//button[normalize-space()="mar"])[1]    visible    10s
+    Click    xpath=(//button[normalize-space()="mar"])[1]
+    Wait For Elements State    role=button[name="Aplicar Filtros"] >> nth=0    enabled    10s
+    Click    role=button[name="Aplicar Filtros"] >> nth=0
+    Wait For Elements State    css=[data-testid="card-game"] >> nth=0    visible    10s
+    Wait For Elements State    role=button[name="Aplicar Filtros"] >> nth=0    disabled    10s

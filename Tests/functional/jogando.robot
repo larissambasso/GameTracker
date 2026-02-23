@@ -93,8 +93,3 @@ Verify game in Stats page
     Ensure Logged In And Home
     Saved info game
     Save And Check On Stats
-
-
-
-
-
