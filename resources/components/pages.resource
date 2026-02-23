@@ -15,7 +15,6 @@ Click Card Game
     Click                      css=[data-testid="card-game"] >> nth=0
     ${url}=    Get Url
     Should Contain    ${url}    /search?game=
-    Click                      css=[data-testid="CloseIcon"]
 
 Click page Jogarei
     Wait For Elements State    role=link[name="Jogarei"]    visible    10s
