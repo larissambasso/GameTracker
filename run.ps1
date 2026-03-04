@@ -14,9 +14,18 @@ Get-Content .env | ForEach-Object {
 }
 
 # Se o primeiro argumento NÃO começa com "-", ele é o device (mobile)
+$DEVICE = "web"   # default
+
 if ($args.Count -gt 0 -and -not $args[0].StartsWith("-")) {
+
     $DEVICE = $args[0]
-    $ROBOT_ARGS = $args[1..($args.Count - 1)]
+
+    if ($args.Count -gt 1) {
+        $ROBOT_ARGS = $args[1..($args.Count - 1)]
+    } else {
+        $ROBOT_ARGS = @()
+    }
+
 } else {
     $ROBOT_ARGS = $args
 }

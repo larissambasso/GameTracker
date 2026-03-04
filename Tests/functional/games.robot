@@ -25,9 +25,15 @@ ${INVALID_BASE}   asdfghjklqwerty12345
 Verify Tooltip Logout and exit button
     Ensure Logged In And Home
     Wait For Elements State    css=input[placeholder*="Pesquise"]    visible    10s
-    Hover    text="Sair"
-    Wait For Elements State    text="Sair"    visible    5s
-    Click    text="Sair"
+    IF    "${DEVICE}" == "mobile"
+        Click    css=button[aria-label="Abrir menu do perfil"]
+        Wait For Elements State    role=menuitem[name="Sair"]    visible    5s
+        Click    role=menuitem[name="Sair"]
+    ELSE
+        Hover    text="Sair"
+        Wait For Elements State    text="Sair"    visible    5s
+        Click    text="Sair"
+    END
     ${current_url}=    Get Url
     Should Contain     ${current_url}    /login
 
