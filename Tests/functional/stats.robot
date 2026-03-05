@@ -105,11 +105,19 @@ Validate delete game
         ${zerados}=    Get Text    ${ZERADOS_COUNTER}
         ${before}=     Convert To Integer    ${zerados}
         Log To Console    Quantidade de Jogos Zerados (antes)=${before}
+
         IF    ${before} > 0
             ${expected}=    Evaluate    ${before} - 1
 
-            Wait For Elements State    role=button[name="Excluir"] >> nth=0    visible    10s
-            Click    role=button[name="Excluir"] >> nth=0
+            # 👇 Abre accordion apenas no mobile
+            IF    '${DEVICE}' == 'mobile'
+                Click    css=button[aria-label*="Abrir detalhes"] >> nth=0
+                Wait For Elements State    role=button[name="Deletar"] >> nth=0    visible    5s
+                Click    role=button[name="Deletar"] >> nth=0
+            ELSE
+                Wait For Elements State    role=button[name="Excluir"] >> nth=0    visible    10s
+                Click    role=button[name="Excluir"] >> nth=0
+            END
             Wait For Elements State    text="Atenção: Ação Irreversível"    state=visible    timeout=10s
             Click    role=button[name="Sim, excluir"]
 
