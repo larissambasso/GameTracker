@@ -36,16 +36,27 @@ Saved info game
     Click    css=select[name="completion_type"]
     Select Options By    css=select[name="completion_type"]    label    Campanha Principal
     Select conclusion date
-    Select Rating    4
+    IF    '${DEVICE}' == 'mobile'
+        Click    css=span.MuiSlider-thumb
+        Press Keys    css=span.MuiSlider-thumb    ArrowRight
+        Press Keys    css=span.MuiSlider-thumb    ArrowRight
+        Press Keys    css=span.MuiSlider-thumb    ArrowRight
+    ELSE
+        Select Rating    4
+    END   
     Click    css=label:has(span:has-text("Complicado"))
 
 Save And Check On Stats
-    ${game}=    Get Text    css=h2
+    ${game}=    Get Property    css=h2    textContent
     ${game}=    Strip String    ${game}
     Log To Console    Jogo salvo: ${game}
     Click    role=button[name="Salvar"]
     Click    role=link[name="Stats"]
-    Wait For Elements State    css=tr:has-text("${game}") >> nth=0    visible    10s
+    IF    '${DEVICE}' == 'mobile'
+        Wait For Elements State    role=button[name="${game}"]    visible    10s
+    ELSE
+        Wait For Elements State    css=tr:has-text("${game}") >> nth=0    visible    10s
+    END
 
 
 

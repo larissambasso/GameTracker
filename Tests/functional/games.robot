@@ -111,6 +111,9 @@ Validate saved game page
 Verify filter plataform
     Ensure Logged In And Home
     Wait For Elements State    css=[data-testid="card-game"] >> nth=0    visible    10s
+    IF    '${DEVICE}' == 'mobile'
+        Click    css=span.relative >> svg >> nth=0
+    END
     Click    css=input[name="filter-platforms"] >> nth=0
     Wait For Elements State    css=input[name="filter-platforms"] >> nth=0    checked    5s
     Wait For Elements State    role=button[name="Aplicar Filtros"] >> nth=0    enabled    10s
@@ -121,6 +124,9 @@ Verify filter plataform
 Verify filter data
     Ensure Logged In And Home
     Wait For Elements State    css=[data-testid="card-game"] >> nth=0    visible    10s
+    IF    '${DEVICE}' == 'mobile'
+        Click    css=span.relative >> svg >> nth=0
+    END
     Click    xpath=//summary[.//span[normalize-space()="Data"]]
     Wait For Elements State    css=button[aria-label="Choose date"] >> nth=0    visible    10s
     Click    css=button[aria-label="Choose date"] >> nth=0

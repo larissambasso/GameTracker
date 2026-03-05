@@ -12,48 +12,60 @@ ${EMPTY_STATE}        data-testid=empty-state-message
 
 *** Keywords ***
 Log times and Total
-    Wait For Elements State    css=div.hidden.md\\:block tbody > tr.group >> nth=0    visible    10s
-    ${count}=    Get Element Count    css=div.hidden.md\\:block tbody > tr.group
-    ${total}=    Set Variable    0
 
-    FOR    ${i}    IN RANGE    ${count}
-        ${st}    ${t}=    Run Keyword And Ignore Error
-        ...    Get Text    css=div.hidden.md\\:block tbody > tr.group >> nth=${i} >> td:nth-child(4) span.font-mono.text-xs.font-semibold
+    IF    '${DEVICE}' == 'mobile'
+        Wait For Elements State    text="Tempo Total de Jogo"    visible    10s
+        ${elements}=    Get Elements    css=span.tabular-nums
+        ${meses}=      Get Text    ${elements}[0]
+        ${dias}=       Get Text    ${elements}[1]
+        ${horas}=      Get Text    ${elements}[2]
+        ${minutos}=    Get Text    ${elements}[3]
 
-        IF    '${st}' == 'PASS'
-            ${t}=    Strip String    ${t}
-            Log To Console    Linha ${i+1}: ${t}
-            ${h}=    Evaluate    (__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")
-            ${m}=    Evaluate    (__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")
-            ${total}=    Evaluate    int(${total}) + int(${h})*60 + int(${m})
-        ELSE
-            Log To Console    Linha ${i+1}: (sem tempo)
-        END
+        Log To Console    Tempo total: ${meses}m ${dias}d ${horas}h ${minutos}min
+
+    ELSE
+        Wait For Elements State    css=div.hidden.md\\:block tbody > tr.group >> nth=0    visible    10s
     END
+        ${count}=    Get Element Count    css=div.hidden.md\\:block tbody > tr.group
+        ${total}=    Set Variable    0
+    
+        FOR    ${i}    IN RANGE    ${count}
+            ${st}    ${t}=    Run Keyword And Ignore Error
+            ...    Get Text    css=div.hidden.md\\:block tbody > tr.group >> nth=${i} >> td:nth-child(4) span.font-mono.text-xs.font-semibold
 
-    ${mm}=    Evaluate    int(${total}) // (30*24*60)
-    ${r}=     Evaluate    int(${total}) % (30*24*60)
-    ${dd}=    Evaluate    int(${r}) // (24*60)
-    ${r}=     Evaluate    int(${r}) % (24*60)
-    ${hh}=    Evaluate    int(${r}) // 60
-    ${mi}=    Evaluate    int(${r}) % 60
+            IF    '${st}' == 'PASS'
+                ${t}=    Strip String    ${t}
+                Log To Console    Linha ${i+1}: ${t}
+                ${h}=    Evaluate    (__import__("re").search(r"(\\d+)h", """${t}""").group(1) if __import__("re").search(r"(\\d+)h", """${t}""") else "0")
+                ${m}=    Evaluate    (__import__("re").search(r"(\\d+)m", """${t}""").group(1) if __import__("re").search(r"(\\d+)m", """${t}""") else "0")
+                ${total}=    Evaluate    int(${total}) + int(${h})*60 + int(${m})
+            ELSE
+                Log To Console    Linha ${i+1}: (sem tempo)
+            END
+        END
 
-    ${dd2}=    Format String    {:02d}    ${dd}
-    ${hh2}=    Format String    {:02d}    ${hh}
-    ${mi2}=    Format String    {:02d}    ${mi}
-    Log To Console    Total: ${dd2} dias ${hh2} horas e ${mi2} minutos
-    ${total_txt}=    Set Variable    Total: ${dd2} dias ${hh2} horas e ${mi2} minutos
+        ${mm}=    Evaluate    int(${total}) // (30*24*60)
+        ${r}=     Evaluate    int(${total}) % (30*24*60)
+        ${dd}=    Evaluate    int(${r}) // (24*60)
+        ${r}=     Evaluate    int(${r}) % (24*60)
+        ${hh}=    Evaluate    int(${r}) // 60
+        ${mi}=    Evaluate    int(${r}) % 60
+
+        ${dd2}=    Format String    {:02d}    ${dd}
+        ${hh2}=    Format String    {:02d}    ${hh}
+        ${mi2}=    Format String    {:02d}    ${mi}
+        Log To Console    Total: ${dd2} dias ${hh2} horas e ${mi2} minutos
+        ${total_txt}=    Set Variable    Total: ${dd2} dias ${hh2} horas e ${mi2} minutos
 
 
-    ${months}=    Get Text    css=span.tabular-nums >> nth=0
-    ${days}=      Get Text    css=span.tabular-nums >> nth=1
-    ${hours}=     Get Text    css=span.tabular-nums >> nth=2
-    ${minutes}=   Get Text    css=span.tabular-nums >> nth=3
+        ${months}=    Get Text    css=span.tabular-nums >> nth=0
+        ${days}=      Get Text    css=span.tabular-nums >> nth=1
+        ${hours}=     Get Text    css=span.tabular-nums >> nth=2
+        ${minutes}=   Get Text    css=span.tabular-nums >> nth=3
 
-    Log To Console    Total: ${days} dias ${hours} horas e ${minutes} minutos
-    ${total_games}=    Set Variable    Total: ${days} dias ${hours} horas e ${minutes} minutos
-    Should Be Equal    ${total_txt}    ${total_games}
-
+        Log To Console    Total: ${days} dias ${hours} horas e ${minutes} minutos
+        ${total_games}=    Set Variable    Total: ${days} dias ${hours} horas e ${minutes} minutos
+        Should Be Equal    ${total_txt}    ${total_games}
 
 Zerados Counter Should Be
     [Arguments]    ${expected}
@@ -73,9 +85,14 @@ Log each game time
 Validate edit game
     Ensure Logged In And Home
     Click page Stats
-    Wait For Elements State    role=button[name="Editar"] >> nth=0    visible    10s
-    Click    role=button[name="Editar"] >> nth=0
-    Wait For Elements State    role=button[name="Salvar"]    state=visible    timeout=10s
+    IF    '${DEVICE}' == 'mobile'
+        Click    css=button[aria-label="Abrir detalhes"] >> nth=0
+        Click    role=button[name="editar"]
+    ELSE
+        Wait For Elements State    role=button[name="Editar"] >> nth=0    visible    10s
+        Click    role=button[name="Editar"] >> nth=0
+    END
+        Wait For Elements State    role=button[name="Salvar"]    state=visible    timeout=10s
 
 Validate delete game
     Ensure Logged In And Home
